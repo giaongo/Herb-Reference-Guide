@@ -4,15 +4,177 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/green"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/imageBanner"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_marginTop="100dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/imageContent"
+        android:scaleType="fitXY"
+        android:src="@drawable/background"
+        app:layout_constraintBottom_toTopOf="@+id/layoutHerbFruit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
+        android:id="@+id/txtBanner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/headland_one"
+        android:text="@string/description"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageBanner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.974" />
+
+    <LinearLayout
+        android:id="@+id/layoutHerbFruit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/layoutVeggieNote"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/imageBanner"
+        app:layout_constraintTop_toBottomOf="@+id/imageBanner">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/mcHerbs"
+            android:layout_width="150dp"
+            android:layout_height="110dp"
+            android:backgroundTint="@color/cream"
+            app:cardElevation="5dp"
+            app:rippleColor="@color/dark_cream">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:contentDescription="@string/vectorHerb"
+                android:src="@drawable/ic_herb" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="25dp"
+                android:fontFamily="serif-monospace"
+                android:text="@string/herbs"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <Space
+            android:layout_width="20dp"
+            android:layout_height="match_parent" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/mcFruits"
+            android:layout_width="150dp"
+            android:layout_height="110dp"
+            android:backgroundTint="@color/cream"
+            app:cardElevation="5dp"
+            app:rippleColor="@color/dark_cream">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:contentDescription="@string/vectorFruit"
+                android:src="@drawable/ic_fruit" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="25dp"
+                android:fontFamily="serif-monospace"
+                android:text="@string/fruits"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutVeggieNote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="336dp"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/layoutHerbFruit"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/layoutHerbFruit"
+        app:layout_constraintTop_toBottomOf="@+id/layoutHerbFruit">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/mcVegetables"
+            android:layout_width="150dp"
+            android:layout_height="110dp"
+            android:backgroundTint="@color/cream"
+            app:cardElevation="5dp"
+            app:rippleColor="@color/dark_cream">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:contentDescription="@string/vectorVegetable"
+                android:src="@drawable/ic_veggie" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="25dp"
+                android:fontFamily="serif-monospace"
+                android:text="@string/vegetables"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <Space
+            android:layout_width="20dp"
+            android:layout_height="match_parent" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/mcNotes"
+            android:layout_width="150dp"
+            android:layout_height="110dp"
+            android:backgroundTint="@color/cream"
+            app:cardElevation="5dp"
+            app:rippleColor="@color/dark_cream">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:contentDescription="@string/vectorNote"
+                android:src="@drawable/ic_note" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="25dp"
+                android:fontFamily="serif-monospace"
+                android:text="@string/notes"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

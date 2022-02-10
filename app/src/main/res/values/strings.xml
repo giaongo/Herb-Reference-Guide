@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Herb Reference Guide</string>
+    <string name="description">Arcane Herbal Knowledge</string>
+    <string name="herbs">Herbs</string>
+    <string name="fruits">Fruits</string>
+    <string name="vegetables">Vegetables</string>
+    <string name="notes">Notes</string>
+    <string name="imageContent">Herb Types</string>
+    <string name="vectorFruit">Fruit type</string>
+    <string name="vectorHerb">Herb type</string>
+    <string name="vectorVegetable">Veggie type</string>
+    <string name="vectorNote">Note type</string>
 </resources>
