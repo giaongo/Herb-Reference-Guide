@@ -16,12 +16,14 @@ public class NoteActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_note);
 
+        setTitle(getString(R.string.note_label));
         RecyclerView recyclerView = findViewById(R.id.noteRecyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         List<Note> noteList = new ArrayList<>();
         noteList.add(new Note("Orange Nutrition", "help to fight with cancer"));
         noteList.add(new Note("Fruit vitamin", "increase health resistance"));
-        noteList.add(new Note("Title 3", "this is a test"));
+        noteList.add(new Note("Banana benefits", "For the use of treating stress"));
+        noteList.add(new Note("Mint", "this is a test"));
         NoteAdapter noteAdapter = new NoteAdapter(noteList);
 
         recyclerView.setAdapter(noteAdapter);

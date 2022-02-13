@@ -10,4 +10,8 @@
     <string name="vectorHerb">Herb type</string>
     <string name="vectorVegetable">Veggie type</string>
     <string name="vectorNote">Note type</string>
+    <string name="note_label">My Notes</string>
+    <string name="note_title">Title</string>
+    <string name="note_description">Description</string>
+    <string name="btn_save">SAVE</string>
 </resources>

@@ -4,9 +4,9 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:layout_margin="16dp"
-    android:padding="10dp"
+    android:padding="16dp"
     android:layout_gravity="center"
-    android:background="@color/dark_cream">
+    android:background="@color/white">
 
     <TextView
         android:id="@+id/tvTitle"
