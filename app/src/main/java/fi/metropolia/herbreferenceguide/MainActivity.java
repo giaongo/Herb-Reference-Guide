@@ -2,6 +2,7 @@ package fi.metropolia.herbreferenceguide;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -35,7 +36,8 @@ public class MainActivity extends AppCompatActivity {
             } else if(view.getId() == R.id.mcVegetables) {
                 Toast.makeText(MainActivity.this, "Vegetable clicked", Toast.LENGTH_SHORT).show();
             } else if(view.getId() == R.id.mcNotes)  {
-                Toast.makeText(MainActivity.this, "Note clicked", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MainActivity.this, NoteActivity.class);
+                startActivity(intent);
             }
         }
     }

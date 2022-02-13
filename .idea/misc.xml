@@ -3,7 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/giaon/AndroidStudioProjects/HerbReferenceGuide/app/src/main/res/layout/activity_main.xml" value="0.1513157894736842" />
+        <entry key="..\:/Users/giaon/AndroidStudioProjects/HerbReferenceGuide/app/src/main/res/drawable/ic_add.xml" value="0.1525" />
+        <entry key="..\:/Users/giaon/AndroidStudioProjects/HerbReferenceGuide/app/src/main/res/layout/activity_main.xml" value="0.14666666666666667" />
+        <entry key="..\:/Users/giaon/AndroidStudioProjects/HerbReferenceGuide/app/src/main/res/layout/activity_note.xml" value="0.4466666666666667" />
+        <entry key="..\:/Users/giaon/AndroidStudioProjects/HerbReferenceGuide/app/src/main/res/layout/note_recycler.xml" value="0.4466666666666667" />
+        <entry key="..\:/Users/giaon/AndroidStudioProjects/HerbReferenceGuide/app/src/main/res/layout/note_recycler_layout.xml" value="0.1" />
       </map>
     </option>
   </component>
