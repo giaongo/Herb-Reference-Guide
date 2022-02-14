@@ -30,7 +30,7 @@
         android:background="@color/white"
         android:ems="10"
         android:hint="@string/note_description"
-        android:inputType="text"
+        android:inputType="textMultiLine"
         android:padding="20dp"
         app:layout_constraintEnd_toEndOf="@+id/edtTitle"
         app:layout_constraintHorizontal_bias="0.0"
@@ -38,6 +38,7 @@
         app:layout_constraintTop_toBottomOf="@+id/edtTitle" />
 
     <Button
+        android:id="@+id/btnSave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"

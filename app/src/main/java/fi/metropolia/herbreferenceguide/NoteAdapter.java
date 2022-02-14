@@ -10,6 +10,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
+import fi.metropolia.herbreferenceguide.database.Note;
+
 public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.ViewHolder>{
     private List<Note> noteList;
 
@@ -28,8 +30,8 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.ViewHolder>{
 
     @Override
     public void onBindViewHolder(@NonNull NoteAdapter.ViewHolder holder, int position) {
-        holder.tvTitle.setText(noteList.get(position).getTitle());
-        holder.tvDescription.setText(noteList.get(position).getDescription());
+        holder.tvTitle.setText(noteList.get(position).note_title);
+        holder.tvDescription.setText(noteList.get(position).note_description);
     }
 
     @Override

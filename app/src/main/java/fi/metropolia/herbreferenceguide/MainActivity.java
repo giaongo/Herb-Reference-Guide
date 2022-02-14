@@ -10,7 +10,7 @@ import android.widget.Toast;
 import com.google.android.material.card.MaterialCardView;
 
 public class MainActivity extends AppCompatActivity {
-    MaterialCardView mcHerbs, mcFruits, mcVegetables, mcNote;
+    private MaterialCardView mcHerbs, mcFruits, mcVegetables, mcNote;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
