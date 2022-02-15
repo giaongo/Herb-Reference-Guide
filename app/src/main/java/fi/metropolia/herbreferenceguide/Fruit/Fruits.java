@@ -1,9 +1,9 @@
-package fi.metropolia.herbreferenceguide;
+package fi.metropolia.herbreferenceguide.Fruit;
 
-public class Veggies {
+public class Fruits {
     private String name;
 
-    public Veggies(String name) {
+    public Fruits(String name) {
         this.name = name;
     }
 
@@ -17,7 +17,7 @@ public class Veggies {
 
     @Override
     public String toString() {
-        return "Veggies{" +
+        return "Fruits{" +
                 "name='" + name + '\'' +
                 '}';
     }

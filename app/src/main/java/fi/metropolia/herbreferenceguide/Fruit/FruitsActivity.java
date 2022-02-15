@@ -1,4 +1,4 @@
-package fi.metropolia.herbreferenceguide;
+package fi.metropolia.herbreferenceguide.Fruit;
 
 
 import android.os.Bundle;
@@ -7,6 +7,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+
+import fi.metropolia.herbreferenceguide.MainActivity;
+import fi.metropolia.herbreferenceguide.R;
 
 
 public class FruitsActivity extends MainActivity {

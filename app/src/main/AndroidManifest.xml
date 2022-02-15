@@ -18,9 +18,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".FruitsActivity" />
-        <activity android:name=".HerbsActivity"/>
-        <activity android:name=".VeggiesActivity"/>
+        <activity android:name=".Fruit.FruitsActivity" />
+        <activity android:name=".Herb.HerbsActivity"/>
+        <activity android:name=".Veggie.VeggiesActivity"/>
     </application>
 
 </manifest>

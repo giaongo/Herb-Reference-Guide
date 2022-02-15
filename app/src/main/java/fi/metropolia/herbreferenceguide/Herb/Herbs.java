@@ -1,4 +1,4 @@
-package fi.metropolia.herbreferenceguide;
+package fi.metropolia.herbreferenceguide.Herb;
 
 public class Herbs {
     private String name;

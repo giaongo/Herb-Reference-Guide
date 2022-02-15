@@ -1,4 +1,4 @@
-package fi.metropolia.herbreferenceguide;
+package fi.metropolia.herbreferenceguide.Veggie;
 
 import android.os.Bundle;
 
@@ -7,7 +7,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class VeggiesActivity extends MainActivity{
+import fi.metropolia.herbreferenceguide.MainActivity;
+import fi.metropolia.herbreferenceguide.R;
+
+public class VeggiesActivity extends MainActivity {
     private RecyclerView myVeggieRecyclerView;
 
     @Override

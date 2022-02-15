@@ -1,4 +1,4 @@
-package fi.metropolia.herbreferenceguide;
+package fi.metropolia.herbreferenceguide.Fruit;
 
 import android.annotation.SuppressLint;
 
@@ -13,6 +13,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+
+import fi.metropolia.herbreferenceguide.R;
 
 public class FruitRecyclerViewAdapter extends RecyclerView.Adapter<FruitRecyclerViewAdapter.ViewHolder>{
 

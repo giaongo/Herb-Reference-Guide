@@ -6,6 +6,10 @@ import androidx.cardview.widget.CardView;
 import android.content.Intent;
 import android.os.Bundle;
 
+import fi.metropolia.herbreferenceguide.Fruit.FruitsActivity;
+import fi.metropolia.herbreferenceguide.Herb.HerbsActivity;
+import fi.metropolia.herbreferenceguide.Veggie.VeggiesActivity;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
