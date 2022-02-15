@@ -5,10 +5,13 @@
       <map>
         <entry key="..\:/Users/giaon/AndroidStudioProjects/HerbReferenceGuide/app/src/main/res/drawable/ic_add.xml" value="0.1525" />
         <entry key="..\:/Users/giaon/AndroidStudioProjects/HerbReferenceGuide/app/src/main/res/drawable/ic_herb.xml" value="0.4295" />
-        <entry key="..\:/Users/giaon/AndroidStudioProjects/HerbReferenceGuide/app/src/main/res/layout/activity_main.xml" value="0.14666666666666667" />
-        <entry key="..\:/Users/giaon/AndroidStudioProjects/HerbReferenceGuide/app/src/main/res/layout/activity_note.xml" value="0.4466666666666667" />
-        <entry key="..\:/Users/giaon/AndroidStudioProjects/HerbReferenceGuide/app/src/main/res/layout/activity_note_adding.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/giaon/AndroidStudioProjects/HerbReferenceGuide/app/src/main/res/layout/activity_main.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/giaon/AndroidStudioProjects/HerbReferenceGuide/app/src/main/res/layout/activity_note.xml" value="0.1" />
+        <entry key="..\:/Users/giaon/AndroidStudioProjects/HerbReferenceGuide/app/src/main/res/layout/activity_note_adding.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/giaon/AndroidStudioProjects/HerbReferenceGuide/app/src/main/res/layout/activity_note_display.xml" value="0.14743589743589744" />
+        <entry key="..\:/Users/giaon/AndroidStudioProjects/HerbReferenceGuide/app/src/main/res/layout/activity_note_editing.xml" value="0.4551282051282051" />
+        <entry key="..\:/Users/giaon/AndroidStudioProjects/HerbReferenceGuide/app/src/main/res/layout/activity_note_updating.xml" value="0.44936708860759494" />
+        <entry key="..\:/Users/giaon/AndroidStudioProjects/HerbReferenceGuide/app/src/main/res/layout/dfdfd.xml" value="0.4551282051282051" />
         <entry key="..\:/Users/giaon/AndroidStudioProjects/HerbReferenceGuide/app/src/main/res/layout/note_recycler.xml" value="0.4466666666666667" />
         <entry key="..\:/Users/giaon/AndroidStudioProjects/HerbReferenceGuide/app/src/main/res/layout/note_recycler_layout.xml" value="0.1" />
       </map>

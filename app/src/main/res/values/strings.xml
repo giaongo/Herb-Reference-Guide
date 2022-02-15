@@ -14,11 +14,19 @@
     <string name="vectorVegetable">Veggie type</string>
     <string name="vectorNote">Note type</string>
 
-    <string name="note_title">Enter Title</string>
-    <string name="note_description">Enter Description</string>
+    <!-- Note sections   -->
 
     <string name="title_display">Title</string>
     <string name="description_display">Description</string>
-    <string name="btn_save">ADD</string>
+
     <string name="txtAddNote">Adding Note</string>
+    <string name="noteAdd">Enter Title</string>
+    <string name="descriptionAdd">Enter Description</string>
+    <string name="btn_add">ADD</string>
+
+    <string name="txtEditNote">Editing Note</string>
+    <string name="titleUpdate">Update Title</string>
+    <string name="descriptionUpdate">Update Description</string>
+    <string name="btnUpdate">UPDATE</string>
+    <string name="btnDelete">DELETE</string>
 </resources>
