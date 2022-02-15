@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">Herb Reference Guide</string>
+    <string name="note_label">My Notes</string>
+    <string name="addNote_label">Adding Notes</string>
+
     <string name="description">Arcane Herbal Knowledge</string>
     <string name="herbs">Herbs</string>
     <string name="fruits">Fruits</string>
@@ -10,8 +13,12 @@
     <string name="vectorHerb">Herb type</string>
     <string name="vectorVegetable">Veggie type</string>
     <string name="vectorNote">Note type</string>
-    <string name="note_label">My Notes</string>
-    <string name="note_title">Title</string>
-    <string name="note_description">Description</string>
-    <string name="btn_save">SAVE</string>
+
+    <string name="note_title">Enter Title</string>
+    <string name="note_description">Enter Description</string>
+
+    <string name="title_display">Title</string>
+    <string name="description_display">Description</string>
+    <string name="btn_save">ADD</string>
+    <string name="txtAddNote">Adding Note</string>
 </resources>

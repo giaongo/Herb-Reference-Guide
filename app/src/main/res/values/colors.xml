@@ -9,7 +9,9 @@
     <color name="white">#FFFFFFFF</color>
     <color name="dark_green">#064420</color>
     <color name="green">#E4EFE7</color>
+    <color name="lime_green">#C1DEAE</color>
     <color name="cream">#FDFAF6</color>
     <color name="dark_cream">#FAF1E6</color>
+    <color name="pastel">#E2C2B9</color>
     <color name="grey">#E7E7E7</color>
 </resources>
