@@ -6,15 +6,13 @@ import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.util.List;
-
+import fi.metropolia.herbreferenceguide.database.AppDatabase;
 import fi.metropolia.herbreferenceguide.database.Note;
-import fi.metropolia.herbreferenceguide.database.NoteDatabase;
 
 public class NoteActivity extends AppCompatActivity {
     private FloatingActionButton fabAddNote;
@@ -50,7 +48,7 @@ public class NoteActivity extends AppCompatActivity {
         recyclerView.setAdapter(noteAdapter);
     }
     private void loadNoteData() {
-        NoteDatabase noteDatabase = NoteDatabase.getINSTANCE(NoteActivity.this);
+        AppDatabase noteDatabase = AppDatabase.getINSTANCE(NoteActivity.this);
         noteList = noteDatabase.noteDao().getAllNote();
     }
     public void openSomeActivityForResult() {

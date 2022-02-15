@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import fi.metropolia.herbreferenceguide.database.Note;
-import fi.metropolia.herbreferenceguide.database.NoteDatabase;
+import fi.metropolia.herbreferenceguide.database.AppDatabase;
 
 public class NoteAddingActivity extends AppCompatActivity {
     private Button btnSave;
@@ -25,7 +25,7 @@ public class NoteAddingActivity extends AppCompatActivity {
     }
 
     private void saveNote() {
-        NoteDatabase noteDatabase = NoteDatabase.getINSTANCE(this);
+        AppDatabase noteDatabase = AppDatabase.getINSTANCE(this);
         title = findViewById(R.id.edtTitle);
         description = findViewById(R.id.edtDescription);
         Note newNote = new Note();

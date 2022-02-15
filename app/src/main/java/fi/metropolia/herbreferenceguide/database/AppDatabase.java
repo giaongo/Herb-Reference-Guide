@@ -7,13 +7,13 @@ import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
 @Database(entities = {Note.class}, version = 1)
-public abstract class NoteDatabase extends RoomDatabase{
-        private static NoteDatabase INSTANCE;
+public abstract class AppDatabase extends RoomDatabase{
+        private static AppDatabase INSTANCE;
         public abstract NoteDao noteDao();
-        public static NoteDatabase getINSTANCE(Context context) {
+        public static AppDatabase getINSTANCE(Context context) {
             if(INSTANCE == null) {
-                INSTANCE = Room.databaseBuilder(context.getApplicationContext(), NoteDatabase.class,
-                        "note_database.db")
+                INSTANCE = Room.databaseBuilder(context.getApplicationContext(), AppDatabase.class,
+                        "app_database.db")
                         .allowMainThreadQueries()
                         .build();
             }
