@@ -13,7 +13,7 @@
     <string name="vectorHerb">Herb type</string>
     <string name="vectorVegetable">Veggie type</string>
     <string name="vectorNote">Note type</string>
-
+    <string name= "item_placeholder">%s</string>
     <!-- Note sections   -->
 
     <string name="title_display">Title</string>

@@ -12,11 +12,11 @@
         android:id="@+id/herb_layout"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_centerHorizontal="true"
         android:gravity="center_horizontal"
-        android:text="@string/Herbs"
-        android:textSize="30dp"
+        android:text="@string/item_placeholder"
+        android:textSize="30sp"
         android:textStyle="bold"
-        android:clickable="true"/>
+        android:clickable="true"
+        android:focusable="true"/>
 
 </LinearLayout>
