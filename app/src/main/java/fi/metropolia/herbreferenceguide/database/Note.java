@@ -7,11 +7,31 @@ import androidx.room.PrimaryKey;
 @Entity
 public class Note {
     @PrimaryKey (autoGenerate = true)
-    public int noteId;
+    private int noteId = 0;
+    private String noteTitle;
+    private String noteDescription;
 
-    @ColumnInfo (name = "note_title")
-    public String note_title;
+    public int getNoteId() {
+        return noteId;
+    }
 
-    @ColumnInfo (name = "note_description")
-    public String note_description;
+    public void setNoteId(int noteId) {
+        this.noteId = noteId;
+    }
+
+    public String getNoteTitle() {
+        return noteTitle;
+    }
+
+    public void setNoteTitle(String noteTitle) {
+        this.noteTitle = noteTitle;
+    }
+
+    public String getNoteDescription() {
+        return noteDescription;
+    }
+
+    public void setNoteDescription(String noteDescription) {
+        this.noteDescription = noteDescription;
+    }
 }

@@ -9,6 +9,8 @@ import android.widget.Toast;
 
 import com.google.android.material.card.MaterialCardView;
 
+import fi.metropolia.herbreferenceguide.note.NoteActivity;
+
 public class MainActivity extends AppCompatActivity {
     private MaterialCardView mcHerbs, mcFruits, mcVegetables, mcNote;
     @Override

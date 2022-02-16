@@ -1,4 +1,4 @@
-package fi.metropolia.herbreferenceguide;
+package fi.metropolia.herbreferenceguide.note;
 import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
@@ -11,14 +11,18 @@ import android.content.Intent;
 import android.os.Bundle;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.util.List;
+
+import fi.metropolia.herbreferenceguide.R;
+import fi.metropolia.herbreferenceguide.RecyclerViewInterface;
 import fi.metropolia.herbreferenceguide.database.AppDatabase;
 import fi.metropolia.herbreferenceguide.database.Note;
 
-public class NoteActivity extends AppCompatActivity {
-    private FloatingActionButton fabAddNote;
+public class NoteActivity extends AppCompatActivity implements RecyclerViewInterface {
     private List<Note> noteList;
-
-    ActivityResultLauncher<Intent> someActivityResultLauncher = registerForActivityResult(
+    protected static final String NOTE_POSITION = "Note position";
+    protected static final String TITLE_UPDATE = "Note Title";
+    protected static final String DESCRIPTION_UPDATE = "Note Description";
+    ActivityResultLauncher<Intent> activityResultLauncher = registerForActivityResult(
             new ActivityResultContracts.StartActivityForResult(),
             new ActivityResultCallback<ActivityResult>() {
                 @Override
@@ -35,24 +39,37 @@ public class NoteActivity extends AppCompatActivity {
         setTitle(getString(R.string.note_label));
         loadNoteData();
         initRecyclerView();
-        fabAddNote = findViewById(R.id.fabAddNote);
-        fabAddNote.setOnClickListener(view -> {
-            openSomeActivityForResult();
-        });
+        FloatingActionButton fabAddNote = findViewById(R.id.fabAddNote);
+        fabAddNote.setOnClickListener(view -> openNoteActivityForResult());
+    }
+
+    private void loadNoteData() {
+        AppDatabase noteDatabase = AppDatabase.getINSTANCE(NoteActivity.this);
+        noteList = noteDatabase.noteDao().getAllNote();
     }
 
     private void initRecyclerView() {
         RecyclerView recyclerView = findViewById(R.id.noteRecyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        NoteAdapter noteAdapter = new NoteAdapter(noteList);
+        NoteAdapter noteAdapter = new NoteAdapter(noteList,this);
         recyclerView.setAdapter(noteAdapter);
     }
-    private void loadNoteData() {
-        AppDatabase noteDatabase = AppDatabase.getINSTANCE(NoteActivity.this);
-        noteList = noteDatabase.noteDao().getAllNote();
-    }
-    public void openSomeActivityForResult() {
+
+    public void openNoteActivityForResult() {
         Intent intent = new Intent(this, NoteAddingActivity.class);
-        someActivityResultLauncher.launch(intent);
+        activityResultLauncher.launch(intent);
+    }
+
+    @Override
+    public void onItemClick(int position) {
+        Intent intent = new Intent(NoteActivity.this, NoteUpdatingActivity.class);
+        int noteId = noteList.get(position).getNoteId();
+        String noteTitle = noteList.get(position).getNoteTitle();
+        String noteDescription = noteList.get(position).getNoteDescription();
+
+        intent.putExtra(NOTE_POSITION,noteId);
+        intent.putExtra(TITLE_UPDATE,noteTitle);
+        intent.putExtra(DESCRIPTION_UPDATE,noteDescription);
+        activityResultLauncher.launch(intent);
     }
 }

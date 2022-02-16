@@ -10,7 +10,7 @@ import androidx.room.RoomDatabase;
 public abstract class AppDatabase extends RoomDatabase{
         private static AppDatabase INSTANCE;
         public abstract NoteDao noteDao();
-        public static AppDatabase getINSTANCE(Context context) {
+        public synchronized static AppDatabase getINSTANCE(Context context) {
             if(INSTANCE == null) {
                 INSTANCE = Room.databaseBuilder(context.getApplicationContext(), AppDatabase.class,
                         "app_database.db")

@@ -4,6 +4,7 @@ import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
+import androidx.room.Update;
 
 import java.util.List;
 
@@ -12,8 +13,11 @@ public interface NoteDao {
     @Query("SELECT * FROM note")
     List<Note> getAllNote();
 
+    @Query("UPDATE note SET noteTitle = :title, noteDescription = :description WHERE noteId = :id")
+    int updateNote(String title, String description,int id);
+
     @Insert
-    void insertNote(Note...notes);
+    void insertNote(Note note);
 
     @Delete
     void delete(Note note);

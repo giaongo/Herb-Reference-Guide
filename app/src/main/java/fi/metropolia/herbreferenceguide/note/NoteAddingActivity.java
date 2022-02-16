@@ -1,4 +1,4 @@
-package fi.metropolia.herbreferenceguide;
+package fi.metropolia.herbreferenceguide.note;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,37 +7,35 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 
+import fi.metropolia.herbreferenceguide.R;
 import fi.metropolia.herbreferenceguide.database.Note;
 import fi.metropolia.herbreferenceguide.database.AppDatabase;
 
 public class NoteAddingActivity extends AppCompatActivity {
-    private Button btnSave;
+    private Button btnAdd;
     private EditText title, description;
-    protected final static String TITLE_MESSAGE = "title";
-    protected final static String DESCRIPTION_MESSAGE = "description";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_note_adding);
-        btnSave = findViewById(R.id.btnSave);
-        btnSave.setOnClickListener(view -> saveNote());
+        setTitle(getString(R.string.addNote_label));
+        btnAdd = findViewById(R.id.btnAdd);
+        btnAdd.setOnClickListener(view -> saveNote());
     }
 
     private void saveNote() {
         AppDatabase noteDatabase = AppDatabase.getINSTANCE(this);
-        title = findViewById(R.id.edtTitle);
-        description = findViewById(R.id.edtDescription);
+        title = findViewById(R.id.edtTitleAdd);
+        description = findViewById(R.id.edtDescriptionAdd);
         Note newNote = new Note();
-        newNote.note_title = title.getText().toString();
-        newNote.note_description = description.getText().toString();
+        newNote.setNoteTitle(title.getText().toString());
+        newNote.setNoteDescription(description.getText().toString());
         noteDatabase.noteDao().insertNote(newNote);
         returnToNoteActivity();
     }
     private void returnToNoteActivity() {
         Intent intent = new Intent(NoteAddingActivity.this, NoteActivity.class);
-        intent.putExtra(TITLE_MESSAGE,title.toString());
-        intent.putExtra(DESCRIPTION_MESSAGE,description.toString());
         startActivity(intent);
     }
 }
