@@ -4,18 +4,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import java.util.List;
-
 import fi.metropolia.herbreferenceguide.R;
 import fi.metropolia.herbreferenceguide.RecyclerViewInterface;
 import fi.metropolia.herbreferenceguide.database.Note;
 
 public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.ViewHolder>{
-    private List<Note> noteList;
+    private final List<Note> noteList;
     private final RecyclerViewInterface recyclerViewInterface;
 
     public NoteAdapter(List<Note> noteData, RecyclerViewInterface recyclerViewInterface) {
@@ -44,20 +41,17 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.ViewHolder>{
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        private TextView tvTitle, tvDescription;
+        private final TextView tvTitle, tvDescription;
         public ViewHolder(@NonNull View itemView, RecyclerViewInterface recyclerViewInterface) {
             super(itemView);
             this.tvTitle = itemView.findViewById(R.id.tvTitle);
             this.tvDescription = itemView.findViewById(R.id.tvDescription);
 
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if(recyclerViewInterface != null) {
-                        int position = getAdapterPosition();
-                        if(position != RecyclerView.NO_POSITION) {
-                            recyclerViewInterface.onItemClick(position);
-                        }
+            itemView.setOnClickListener(view -> {
+                if(recyclerViewInterface != null) {
+                    int position = getAdapterPosition();
+                    if(position != RecyclerView.NO_POSITION) {
+                        recyclerViewInterface.onItemClick(position);
                     }
                 }
             });

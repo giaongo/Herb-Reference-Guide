@@ -1,6 +1,4 @@
 package fi.metropolia.herbreferenceguide.note;
-import androidx.activity.result.ActivityResult;
-import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,12 +22,9 @@ public class NoteActivity extends AppCompatActivity implements RecyclerViewInter
     protected static final String DESCRIPTION_UPDATE = "Note Description";
     ActivityResultLauncher<Intent> activityResultLauncher = registerForActivityResult(
             new ActivityResultContracts.StartActivityForResult(),
-            new ActivityResultCallback<ActivityResult>() {
-                @Override
-                public void onActivityResult(ActivityResult result) {
-                    if (result.getResultCode() == Activity.RESULT_OK) {
-                        loadNoteData();
-                    }
+            result -> {
+                if (result.getResultCode() == Activity.RESULT_OK) {
+                    loadNoteData();
                 }
             });
     @Override
