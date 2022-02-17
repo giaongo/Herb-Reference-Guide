@@ -20,6 +20,7 @@ public class NoteUpdatingActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_note_updating);
+        setTitle(getString(R.string.updateNote_label));
         loadData();
         database = AppDatabase.getINSTANCE(NoteUpdatingActivity.this);
         Button btnUpdate = findViewById(R.id.btnUpdate);

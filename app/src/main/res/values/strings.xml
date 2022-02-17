@@ -1,7 +1,9 @@
 <resources>
+    <!--Menu label-->
     <string name="app_name">Herb Reference Guide</string>
     <string name="note_label">My Notes</string>
-    <string name="addNote_label">Adding Notes</string>
+    <string name="addNote_label">Adding Note</string>
+    <string name="updateNote_label">Updating Note</string>
 
     <string name="description">Arcane Herbal Knowledge</string>
     <string name="herbs">Herbs</string>
@@ -13,18 +15,18 @@
     <string name="vectorHerb">Herb type</string>
     <string name="vectorVegetable">Veggie type</string>
     <string name="vectorNote">Note type</string>
-    <string name= "item_placeholder">%s</string>
-    <!-- Note sections   -->
 
+    <!--Plant sections-->
+    <string name= "item_name">%s</string>
+
+    <!-- Note sections   -->
     <string name="title_display">Title</string>
     <string name="description_display">Description</string>
-
     <string name="txtAddNote">Adding Note</string>
     <string name="noteAdd">Enter Title</string>
     <string name="descriptionAdd">Enter Description</string>
     <string name="btn_add">ADD</string>
-
-    <string name="txtEditNote">Editing Note</string>
+    <string name="txtUpdateNote">Updating Note</string>
     <string name="titleUpdate">Update Title</string>
     <string name="descriptionUpdate">Update Description</string>
     <string name="btnUpdate">UPDATE</string>

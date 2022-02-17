@@ -8,12 +8,12 @@
     tools:context=".note.NoteUpdatingActivity">
 
     <TextView
-        android:id="@+id/txtEditingNote"
+        android:id="@+id/txtUpdatingNote"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:fontFamily="serif-monospace"
-        android:text="@string/txtEditNote"
+        android:text="@string/txtUpdateNote"
         android:textSize="40sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -34,7 +34,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtEditingNote" />
+        app:layout_constraintTop_toBottomOf="@id/txtUpdatingNote" />
 
     <EditText
         android:id="@+id/edtDescriptionUpdate"
