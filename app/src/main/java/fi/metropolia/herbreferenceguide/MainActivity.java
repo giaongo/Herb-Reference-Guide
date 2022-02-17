@@ -9,19 +9,22 @@ import android.widget.Toast;
 
 import com.google.android.material.card.MaterialCardView;
 
+import fi.metropolia.herbreferenceguide.Plant.PlantActivity;
 import fi.metropolia.herbreferenceguide.note.NoteActivity;
 
 public class MainActivity extends AppCompatActivity {
-    private MaterialCardView mcHerbs, mcFruits, mcVegetables, mcNote;
+    Intent intent;
+    String[] typeChosen = {"herb", "fruit",  "veggie"};
+    public static final String TYPE = "plantType";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         CardClick cardClick = new CardClick();
-        mcHerbs = findViewById(R.id.mcHerbs);
-        mcFruits = findViewById(R.id.mcFruits);
-        mcVegetables =  findViewById(R.id.mcVegetables);
-        mcNote = findViewById(R.id.mcNotes);
+        MaterialCardView mcHerbs = findViewById(R.id.mcHerbs);
+        MaterialCardView mcFruits = findViewById(R.id.mcFruits);
+        MaterialCardView mcVegetables =  findViewById(R.id.mcVegetables);
+        MaterialCardView mcNote = findViewById(R.id.mcNotes);
         mcHerbs.setOnClickListener(cardClick);
         mcFruits.setOnClickListener(cardClick);
         mcVegetables.setOnClickListener(cardClick);
@@ -31,16 +34,19 @@ public class MainActivity extends AppCompatActivity {
     private class CardClick  implements View.OnClickListener  {
         @Override
         public void onClick(View view) {
-            if(view.getId() == R.id.mcHerbs) {
-                Toast.makeText(MainActivity.this, "Herb clicked", Toast.LENGTH_SHORT).show();
-            } else if(view.getId() == R.id.mcFruits) {
-                Toast.makeText(MainActivity.this, "Fruit clicked", Toast.LENGTH_SHORT).show();
-            } else if(view.getId() == R.id.mcVegetables) {
-                Toast.makeText(MainActivity.this, "Vegetable clicked", Toast.LENGTH_SHORT).show();
-            } else if(view.getId() == R.id.mcNotes)  {
-                Intent intent = new Intent(MainActivity.this, NoteActivity.class);
-                startActivity(intent);
+            if(view.getId() != R.id.mcNotes) {
+                intent = new Intent(MainActivity.this, PlantActivity.class);
+                if(view.getId() == R.id.mcHerbs) {
+                    intent.putExtra(TYPE,typeChosen[0]);
+                } else if(view.getId() == R.id.mcFruits) {
+                    intent.putExtra(TYPE,typeChosen[1]);
+                } else {
+                    intent.putExtra(TYPE,typeChosen[2]);
+                }
+            } else {
+                intent = new Intent(MainActivity.this, NoteActivity.class);
             }
+            startActivity(intent);
         }
     }
 }
