@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/lime_green"
+    android:background="@color/green"
     tools:context=".note.NoteAddingActivity">
 
     <TextView
@@ -61,7 +61,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         android:text="@string/btn_add"
         android:textColor="@color/black"
-        android:backgroundTint="@color/grey"
+        android:backgroundTint="@color/cream_white"
         app:layout_constraintEnd_toEndOf="@+id/edtDescriptionAdd"
         app:layout_constraintStart_toStartOf="@+id/edtDescriptionAdd"
         app:layout_constraintTop_toBottomOf="@+id/edtDescriptionAdd"

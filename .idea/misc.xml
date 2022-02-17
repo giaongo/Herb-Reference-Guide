@@ -3,15 +3,22 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Hi/AndroidStudioProjects/herb-reference-guide/app/src/main/res/drawable/ic_fruit.xml" value="0.22291666666666668" />
+        <entry key="..\:/Users/Hi/AndroidStudioProjects/herb-reference-guide/app/src/main/res/layout/activity_anything.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Hi/AndroidStudioProjects/herb-reference-guide/app/src/main/res/layout/activity_item_display.xml" value="0.30185185185185187" />
+        <entry key="..\:/Users/Hi/AndroidStudioProjects/herb-reference-guide/app/src/main/res/layout/activity_main.xml" value="0.5216" />
+        <entry key="..\:/Users/Hi/AndroidStudioProjects/herb-reference-guide/app/src/main/res/layout/activity_note.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Hi/AndroidStudioProjects/herb-reference-guide/app/src/main/res/layout/activity_note_adding.xml" value="0.20625" />
+        <entry key="..\:/Users/Hi/AndroidStudioProjects/herb-reference-guide/app/src/main/res/layout/activity_note_updating.xml" value="0.20625" />
+        <entry key="..\:/Users/Hi/AndroidStudioProjects/herb-reference-guide/app/src/main/res/layout/fruit_layout.xml" value="0.33" />
+        <entry key="..\:/Users/Hi/AndroidStudioProjects/herb-reference-guide/app/src/main/res/layout/fruit_list.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Hi/AndroidStudioProjects/herb-reference-guide/app/src/main/res/layout/fruit_recycler_layout.xml" value="0.1" />
+        <entry key="..\:/Users/Hi/AndroidStudioProjects/herb-reference-guide/app/src/main/res/layout/herb_layout.xml" value="0.33" />
+        <entry key="..\:/Users/Hi/AndroidStudioProjects/herb-reference-guide/app/src/main/res/layout/herb_list.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Hi/AndroidStudioProjects/herb-reference-guide/app/src/main/res/layout/herb_recycler_layout.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Hi/AndroidStudioProjects/herb-reference-guide/app/src/main/res/layout/veggie_list.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Hi/AndroidStudioProjects/herb-reference-guide/app/src/main/res/layout/veggie_recycler_layout.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/giaon/AndroidStudioProjects/HerbReferenceGuide/app/src/main/res/layout/activity_main.xml" value="0.1513157894736842" />
-        <entry key="..\:/Users/shayn/AndroidStudioProjects/herb-reference-guide/app/src/main/res/layout/activity_item_display.xml" value="0.264" />
-        <entry key="..\:/Users/shayn/AndroidStudioProjects/herb-reference-guide/app/src/main/res/layout/activity_main.xml" value="0.20833333333333334" />
-        <entry key="..\:/Users/shayn/AndroidStudioProjects/herb-reference-guide/app/src/main/res/layout/fruit_list.xml" value="0.25" />
-        <entry key="..\:/Users/shayn/AndroidStudioProjects/herb-reference-guide/app/src/main/res/layout/fruit_recycler_layout.xml" value="0.25" />
-        <entry key="..\:/Users/shayn/AndroidStudioProjects/herb-reference-guide/app/src/main/res/layout/herb_list.xml" value="0.25" />
-        <entry key="..\:/Users/shayn/AndroidStudioProjects/herb-reference-guide/app/src/main/res/layout/herb_recycler_layout.xml" value="0.25" />
-        <entry key="..\:/Users/shayn/AndroidStudioProjects/herb-reference-guide/app/src/main/res/layout/item_moreinfo_layout.xml" value="0.264" />
-        <entry key="..\:/Users/shayn/AndroidStudioProjects/herb-reference-guide/app/src/main/res/layout/veggie_list.xml" value="0.25" />
       </map>
     </option>
   </component>

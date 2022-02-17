@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
+import fi.metropolia.herbreferenceguide.ItemDisplayActivity;
 import fi.metropolia.herbreferenceguide.MainActivity;
 import fi.metropolia.herbreferenceguide.R;
 import fi.metropolia.herbreferenceguide.RecyclerViewInterface;
@@ -48,7 +49,7 @@ public class PlantActivity extends MainActivity implements RecyclerViewInterface
 
     @Override
     public void onItemClick(int position) {
-        Intent intent = new Intent(PlantActivity.this, PlantActivity.class);
+        Intent intent = new Intent(PlantActivity.this, ItemDisplayActivity.class);
         int plantId = plantList.get(position).getPlantId();
         String plantName = plantList.get(position).getPlantName();
         String plantType = plantList.get(position).getPlantType();
