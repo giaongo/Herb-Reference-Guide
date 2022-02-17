@@ -5,8 +5,10 @@ import android.os.Bundle;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.nio.channels.InterruptedByTimeoutException;
 import java.util.ArrayList;
 
+import fi.metropolia.herbreferenceguide.ItemDisplayActivity;
 import fi.metropolia.herbreferenceguide.MainActivity;
 import fi.metropolia.herbreferenceguide.R;
 
@@ -31,5 +33,8 @@ public class VeggiesActivity extends MainActivity {
         VeggieRecyclerViewAdapter veggieRecyclerViewAdapter = new VeggieRecyclerViewAdapter(Veggies);
         myVeggieRecyclerView.setAdapter(veggieRecyclerViewAdapter);
 
+
+
     }
+
 }

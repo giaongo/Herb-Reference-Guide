@@ -11,4 +11,8 @@
     <color name="green">#E4EFE7</color>
     <color name="cream">#FDFAF6</color>
     <color name="dark_cream">#FAF1E6</color>
+    <color name="cream_white">#FDFDFD</color>
+    <color name="yellow">#FFE14D</color>
+    <color name="blackish">#000000</color>
+    <color name="whitish">#FFFFFF</color>
 </resources>

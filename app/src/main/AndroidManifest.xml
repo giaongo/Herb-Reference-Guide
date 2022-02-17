@@ -10,8 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HerbReferenceGuide">
         <activity
+            android:name=".ItemDisplayActivity"
+            android:parentActivityName=".Veggie.VeggiesActivity" />
+        <activity
             android:name=".MainActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,8 +22,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Fruit.FruitsActivity" />
-        <activity android:name=".Herb.HerbsActivity"/>
-        <activity android:name=".Veggie.VeggiesActivity"/>
+        <activity android:name=".Herb.HerbsActivity" />
+        <activity android:name=".Veggie.VeggiesActivity" />
     </application>
 
 </manifest>

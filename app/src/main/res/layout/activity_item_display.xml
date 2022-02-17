@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cream_white"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView_Carrot"
+        android:layout_width="407dp"
+        android:layout_height="272dp"
+        android:layout_marginBottom="280dp"
+        android:contentDescription="@string/image_carrot"
+        app:layout_constraintBottom_toTopOf="@+id/add_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/carrot" />
+
+    <TextView
+        android:id="@+id/textView_carrot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="119dp"
+        android:layout_marginBottom="17dp"
+        android:fontFamily="serif-monospace"
+        android:text="@string/text_carrot"
+        android:textColor="@color/blackish"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/card_view_nutrition"
+        app:layout_constraintStart_toStartOf="@+id/card_view_nutrition"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_Carrot" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_benefits"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="13dp"
+        app:cardBackgroundColor="@color/green"
+        app:cardCornerRadius="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/card_view_food"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_view_nutrition">
+
+        <TextView
+            android:id="@+id/info_text_benefits"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/yellow"
+            android:fontFamily="serif-monospace"
+            android:text="@string/text_benefits"
+            android:textColor="@color/blackish"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_food"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="49dp"
+        app:cardBackgroundColor="@color/green"
+        app:cardCornerRadius="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_view_benefits">
+
+        <TextView
+            android:id="@+id/info_text_food"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/yellow"
+            android:fontFamily="serif-monospace"
+            android:text="@string/text_food"
+            android:textColor="@color/blackish"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_nutrition"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="14dp"
+        app:cardBackgroundColor="@color/green"
+        app:cardCornerRadius="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/card_view_benefits"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_carrot">
+
+        <TextView
+            android:id="@+id/info_text_nutrition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/yellow"
+            android:fontFamily="serif-monospace"
+            android:text="@string/text_nutrition"
+            android:textColor="@color/blackish"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="16dp"
+        android:layout_marginBottom="1dp"
+        android:backgroundTint="@color/blackish"
+        android:contentDescription="@string/add_icon"
+        android:src="@drawable/addicon"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/card_view_food"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_Carrot"
+        app:tint="@color/whitish" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
