@@ -2,12 +2,16 @@ package fi.metropolia.herbreferenceguide;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
 import com.google.android.material.card.MaterialCardView;
+
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 import fi.metropolia.herbreferenceguide.Plant.PlantActivity;
 import fi.metropolia.herbreferenceguide.note.NoteActivity;
@@ -49,5 +53,8 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         }
     }
+
+
+
 
 }
