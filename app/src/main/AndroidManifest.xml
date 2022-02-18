@@ -30,6 +30,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ItemDisplayActivity"
+            android:exported="false"/>
 
         <activity android:name=".Plant.PlantActivity"
             android:exported="false"

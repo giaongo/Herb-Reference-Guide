@@ -1,0 +1,102 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "dbfc715b44e5caff33bf923bf1429a0c",
+    "entities": [
+      {
+        "tableName": "Note",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`noteId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `noteTitle` TEXT, `noteDescription` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "noteId",
+            "columnName": "noteId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "noteTitle",
+            "columnName": "noteTitle",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "noteDescription",
+            "columnName": "noteDescription",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "noteId"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "Plant",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`plantId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `plantName` TEXT NOT NULL, `plantType` TEXT NOT NULL, `plantNutrition` TEXT NOT NULL, `plantHealthBenefit` TEXT NOT NULL, `plantFoodSuggestion` TEXT NOT NULL, `plantImgSrc` TEXT NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "plantId",
+            "columnName": "plantId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "plantName",
+            "columnName": "plantName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "plantType",
+            "columnName": "plantType",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "plantNutrition",
+            "columnName": "plantNutrition",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "plantHealthBenefit",
+            "columnName": "plantHealthBenefit",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "plantFoodSuggestion",
+            "columnName": "plantFoodSuggestion",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "plantImgSrc",
+            "columnName": "plantImgSrc",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "plantId"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'dbfc715b44e5caff33bf923bf1429a0c')"
+    ]
+  }
+}

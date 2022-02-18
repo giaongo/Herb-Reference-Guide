@@ -20,9 +20,10 @@ public class PlantActivity extends MainActivity implements RecyclerViewInterface
     protected static final String PLANT_ID = "Plant Id";
     protected static final String PLANT_NAME = "Plant Name";
     protected static final String PLANT_TYPE = "Plant Type";
-    protected static final String PLANT_NUTRITIONVALUE = "Plant Nutrition Value";
+    protected static final String PLANT_NUTRITION = "Plant Nutrition";
     protected static final String PLANT_HEALTHBENEFIT = "Plant Health Benefit";
     protected static final String PLANT_FOODSUGGESTION = "Plant Food Suggestion";
+    protected static final String PLANT_IMGSRC = "Plant Image Source";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +54,7 @@ public class PlantActivity extends MainActivity implements RecyclerViewInterface
         int plantId = plantList.get(position).getPlantId();
         String plantName = plantList.get(position).getPlantName();
         String plantType = plantList.get(position).getPlantType();
-        String plantNutritionValue = plantList.get(position).getPlantNutrition();
+        String plantNutrition = plantList.get(position).getPlantNutrition();
         String plantHealthBenefit = plantList.get(position).getPlantHealthBenefit();
         String plantFoodSuggestion = plantList.get(position).getPlantFoodSuggestion();
         String plantImgSrc = plantList.get(position).getPlantImgSrc();
@@ -62,8 +63,9 @@ public class PlantActivity extends MainActivity implements RecyclerViewInterface
         intent.putExtra(PLANT_NAME, plantName);
         intent.putExtra(PLANT_TYPE, plantType);
         intent.putExtra(PLANT_HEALTHBENEFIT,plantHealthBenefit);
-        intent.putExtra(PLANT_NUTRITIONVALUE, plantNutritionValue);
+        intent.putExtra(PLANT_NUTRITION, plantNutrition);
         intent.putExtra(PLANT_FOODSUGGESTION, plantFoodSuggestion);
+        intent.putExtra(PLANT_IMGSRC, plantImgSrc);
 
         startActivity(intent);
 
