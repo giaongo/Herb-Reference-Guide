@@ -14,25 +14,32 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 import fi.metropolia.herbreferenceguide.R;
+import fi.metropolia.herbreferenceguide.RecyclerViewInterface;
 import fi.metropolia.herbreferenceguide.database.Plant;
 
 public class PlantRecyclerViewAdapter extends RecyclerView.Adapter<PlantRecyclerViewAdapter.ViewHolder>{
 
-    private final ArrayList<fi.metropolia.herbreferenceguide.database.Plant> plant;
+    private final ArrayList<String> plant;
     Context context;
+    private final RecyclerViewInterface recyclerViewInterface;
 
+    public PlantRecyclerViewAdapter(ArrayList<String> veggies, Context context, RecyclerViewInterface recyclerViewInterface){
+        this.plant = veggies;
+        this.context = context;
+        this.recyclerViewInterface = recyclerViewInterface;
+    }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.plant_recycler_layout, parent, false);
-        return new ViewHolder(view);
+        View view = LayoutInflater.from(context).inflate(R.layout.plant_recycler_layout, parent, false);
+        return new ViewHolder(view,recyclerViewInterface);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") int position) {
         Resources res =  context.getResources();
-        String  plantName = plant.get(position).getPlantName();
+        String  plantName = plant.get(position);
         holder.veggie_layout.setText(res.getString(R.string.item_name,plantName));
     }
 
@@ -41,22 +48,22 @@ public class PlantRecyclerViewAdapter extends RecyclerView.Adapter<PlantRecycler
         return plant.size();
     }
 
-    public PlantRecyclerViewAdapter(ArrayList<Plant> veggies, Context context){
-        this.plant = veggies;
-        this.context = context;
-        //Notify whenever the data set change so that it can refresh the recycler view
-        notifyDataSetChanged();
-    }
-
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
         private final TextView veggie_layout;
 
-        public ViewHolder(@NonNull View itemView) {
+        public ViewHolder(@NonNull View itemView,RecyclerViewInterface recyclerViewInterface) {
             super(itemView);
             veggie_layout = itemView.findViewById(R.id.veggie_layout);
+            itemView.setOnClickListener(view -> {
+                if(recyclerViewInterface != null) {
+                    int position = getAdapterPosition();
+                    if(position != RecyclerView.NO_POSITION) {
+                        recyclerViewInterface.onItemClick(position);
+                    }
+                }
+            });
         }
-
     }
 
 }
