@@ -18,6 +18,16 @@
 
     <!--Plant sections-->
     <string name= "item_name">%s</string>
+    <string name="Herbs">Herbs</string>
+    <string name="veggies">veggies</string>
+    <string name="image_carrot">Carrot</string>
+    <string name="plantItemTitle">%s</string>
+    <string name="text_benefits">Health Benefits and Warning</string>
+    <string name="benefitsDecription">%s</string>
+    <string name="text_food">Food Suggestions</string>
+    <string name="foodDescription">%s</string>
+    <string name="text_nutrition">Nutritional Value</string>
+    <string name="nutritionDescription">%s</string>
 
     <!-- Note sections   -->
     <string name="title_display">Title</string>
@@ -31,13 +41,6 @@
     <string name="descriptionUpdate">Update Description</string>
     <string name="btnUpdate">UPDATE</string>
     <string name="btnDelete">DELETE</string>
-    <string name="Herbs">Herbs</string>
-    <string name="veggies">veggies</string>
-    <string name="image_carrot">Carrot</string>
-    <string name="text_carrot">Carrot</string>
-    <string name="text_benefits">Health Benefits and Warning</string>
-    <string name="text_food">Food Suggestions</string>
-    <string name="text_nutrition">Nutritional Value</string>
     <string name="add_icon">Add</string>
 
 </resources>

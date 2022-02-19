@@ -1,0 +1,57 @@
+package fi.metropolia.herbreferenceguide.Plant;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.content.res.AssetManager;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.os.Bundle;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.Serializable;
+
+import fi.metropolia.herbreferenceguide.R;
+import fi.metropolia.herbreferenceguide.database.Plant;
+
+public class ItemDisplayActivity extends AppCompatActivity {
+//    private ImageView plantImg;
+//    private AssetManager assetManager;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_item_display);
+        Plant plantItem = getIntent().getParcelableExtra(PlantActivity.PLANT_ITEM);
+        TextView plantTitle = findViewById(R.id.txtPlantTitle);
+        plantTitle.setText(plantItem.getPlantName());
+
+        TextView benefitsDescription = findViewById(R.id.benefitsDescriptions);
+        benefitsDescription.setText(plantItem.getPlantHealthBenefit());
+        ImageView img = findViewById(R.id.imagePlant);
+        img.setImageResource(R.drawable.carrot);
+//        loadPlantItem();
+
+//        //Event click listener fo the floating button
+//        FloatingActionButton fab = findViewById(R.id.add_icon);
+//        fab.setOnClickListener(view -> Snackbar.make(view, "Here's a Snackbar", Snackbar.LENGTH_LONG)
+//                .setAction("Action", null).show());
+//
+//        plantImg = findViewById(R.id.imageView_Carrot);
+//        assetManager = this.getAssets();
+//        InputStream is = null;
+//        try {
+//            is = assetManager.open("Img/Herbs/oregano.jpg");
+//        } catch (IOException e){
+//            e.printStackTrace();
+//        }
+//        Bitmap bitmap = BitmapFactory.decodeStream(is);
+//        plantImg.setImageBitmap(bitmap);
+    }
+}
