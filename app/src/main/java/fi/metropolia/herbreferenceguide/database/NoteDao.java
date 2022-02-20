@@ -13,7 +13,7 @@ public interface NoteDao {
     List<Note> getAllNote();
 
     @Query("UPDATE note SET noteTitle = :title, noteDescription = :description WHERE noteId = :id")
-    void updateNote(String title, String description,int id);
+    void updateNote(String title, String description, int id);
 
     @Insert
     void insertNote(Note note);

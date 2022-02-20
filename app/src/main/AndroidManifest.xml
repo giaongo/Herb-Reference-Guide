@@ -31,7 +31,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Plant.ItemDisplayActivity"
-            android:exported="false"/>
+            android:exported="false"
+            android:parentActivityName=".Plant.PlantActivity"/>
 
         <activity android:name=".Plant.PlantActivity"
             android:exported="false"

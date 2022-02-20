@@ -2,7 +2,6 @@ package fi.metropolia.herbreferenceguide.Plant;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -18,7 +17,6 @@ import fi.metropolia.herbreferenceguide.database.Plant;
 
 public class PlantActivity extends AppCompatActivity implements RecyclerViewInterface {
     private ArrayList<String> plantListName;
-    private Plant plantItem;
     private AppDatabase database;
     public static final String PLANT_ITEM = "plant item";
 
@@ -26,6 +24,7 @@ public class PlantActivity extends AppCompatActivity implements RecyclerViewInte
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.plant_list);
+        database = AppDatabase.getINSTANCE(PlantActivity.this);
         loadPlantData();
         initRecyclerView();
     }
@@ -33,9 +32,8 @@ public class PlantActivity extends AppCompatActivity implements RecyclerViewInte
     private void loadPlantData() {
         Intent intent = getIntent();
         String plantType = intent.getStringExtra(MainActivity.TYPE);
-        setTitle(plantType);
-        database= AppDatabase.getINSTANCE(this);
-        plantListName  = (ArrayList<String>) database.plantDao().getPlantByType(plantType);
+        setTitle(plantType.toUpperCase());
+        plantListName = (ArrayList<String>) database.plantDao().getPlantByType(plantType);
     }
 
     private void initRecyclerView() {
@@ -51,10 +49,9 @@ public class PlantActivity extends AppCompatActivity implements RecyclerViewInte
     @Override
     public void onItemClick(int position) {
         String plantName = plantListName.get(position);
-        plantItem = database.plantDao().getPlantByName(plantName);
+        Plant plantItem = database.plantDao().getPlantByName(plantName);
         Intent intent = new Intent(PlantActivity.this, ItemDisplayActivity.class);
-        intent.putExtra(PLANT_ITEM,plantItem);
+        intent.putExtra(PLANT_ITEM, plantItem);
         startActivity(intent);
     }
-
 }

@@ -2,38 +2,36 @@ package fi.metropolia.herbreferenceguide.database;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 import org.jetbrains.annotations.NotNull;
 
-import java.io.Serializable;
-
 @Entity
 public class Plant implements Parcelable {
 
-    @PrimaryKey (autoGenerate = true)
+    @PrimaryKey(autoGenerate = true)
     private int plantId;
 
     @NotNull
-    private String plantName;
+    private final String plantName;
 
     @NotNull
-    private String plantType;
+    private final String plantType;
 
     @NotNull
-    private String plantNutrition;
+    private final String plantNutrition;
 
     @NotNull
-    private String plantHealthBenefit;
+    private final String plantHealthBenefit;
 
     @NotNull
-    private String plantFoodSuggestion;
+    private final String plantFoodSuggestion;
 
     @NotNull
-    private String plantImgSrc;
+    private final String plantImgSrc;
 
     public Plant(int plantId, @NotNull String plantName, @NotNull String plantType,
                  @NotNull String plantNutrition, @NotNull String plantHealthBenefit,
@@ -73,60 +71,33 @@ public class Plant implements Parcelable {
         return plantId;
     }
 
-    public void setPlantId(int plantId) {
-        this.plantId = plantId;
-    }
-
-    public String getPlantName() {
-        return plantName;
-    }
-
-    public void setPlantName(String plantName) {
-        this.plantName = plantName;
-    }
-
     public String getPlantType() {
         return plantType;
     }
 
-    public void setPlantType(String plantType) {
-        this.plantType = plantType;
+    @NonNull
+    public String getPlantName() {
+        return plantName;
     }
 
+    @NonNull
     public String getPlantNutrition() {
         return plantNutrition;
     }
 
-    public void setPlantNutrition(String plantNutrition) {
-        this.plantNutrition = plantNutrition;
-    }
-
+    @NonNull
     public String getPlantHealthBenefit() {
         return plantHealthBenefit;
     }
-    public void setPlantHealthBenefit(String plantHealthBenefit) {
-        this.plantHealthBenefit = plantHealthBenefit;
-    }
 
+    @NonNull
     public String getPlantFoodSuggestion() {
         return plantFoodSuggestion;
     }
 
-    public void setPlantFoodSuggestion(String plantFoodSuggestion) {
-        this.plantFoodSuggestion = plantFoodSuggestion;
-    }
-
+    @NonNull
     public String getPlantImgSrc() {
         return plantImgSrc;
-    }
-
-    public void setPlantImgSrc(String plantImgSrc) {
-        this.plantImgSrc = plantImgSrc;
-    }
-
-    @Override
-    public String toString() {
-        return this.plantName;
     }
 
     @Override
