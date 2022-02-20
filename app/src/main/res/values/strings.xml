@@ -23,7 +23,7 @@
     <string name="image_carrot">Carrot</string>
     <string name="plantItemTitle">%s</string>
     <string name="text_benefits">Health Benefits and Warning</string>
-    <string name="benefitsDecription">%s</string>
+    <string name="benefitsDescription">%s</string>
     <string name="text_food">Food Suggestions</string>
     <string name="foodDescription">%s</string>
     <string name="text_nutrition">Nutritional Value</string>
