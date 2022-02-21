@@ -13,7 +13,7 @@ import org.jetbrains.annotations.NotNull;
 public class Plant implements Parcelable {
 
     @PrimaryKey(autoGenerate = true)
-    private int plantId;
+    private final int plantId;
 
     @NotNull
     private final String plantName;
@@ -45,6 +45,12 @@ public class Plant implements Parcelable {
         this.plantImgSrc = plantImgSrc;
     }
 
+    /**
+     * Constructor to initialize Plan with data from parcel
+     * @param in parcel
+     * @see <a href="https://stackoverflow.com/questions/2139134/how-to-send-an-object-from-one-android-activity-to-another-using-intents">
+     * Stack Overflow: How to send an object from one Android Activity to another using Intents? </a>
+     */
     protected Plant(Parcel in) {
         plantId = in.readInt();
         plantName = in.readString();
@@ -55,6 +61,12 @@ public class Plant implements Parcelable {
         plantImgSrc = in.readString();
     }
 
+    /**
+     * Regenerates a Plant object from parcel.
+     * Study source and reference from Android Studio and Stack Overflow
+     * @see <a href="https://stackoverflow.com/questions/2139134/how-to-send-an-object-from-one-android-activity-to-another-using-intents">
+     * Stack Overflow: How to send an object from one Android Activity to another using Intents? </a>
+     */
     public static final Creator<Plant> CREATOR = new Creator<Plant>() {
         @Override
         public Plant createFromParcel(Parcel in) {
@@ -71,6 +83,7 @@ public class Plant implements Parcelable {
         return plantId;
     }
 
+    @NonNull
     public String getPlantType() {
         return plantType;
     }
@@ -105,6 +118,13 @@ public class Plant implements Parcelable {
         return 0;
     }
 
+    /**
+     *  Writes object data to a parcel
+     * @param parcel parcel to send
+     * @param i flags
+     * @see <a href="https://stackoverflow.com/questions/2139134/how-to-send-an-object-from-one-android-activity-to-another-using-intents">
+     * Stack Overflow: How to send an object from one Android Activity to another using Intents? </a>
+     */
     @Override
     public void writeToParcel(Parcel parcel, int i) {
         parcel.writeInt(plantId);
