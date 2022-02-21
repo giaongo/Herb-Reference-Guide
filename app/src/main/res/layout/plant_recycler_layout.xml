@@ -12,8 +12,6 @@
         android:id="@+id/veggie_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:clickable="true"
-        android:focusable="true"
         android:fontFamily="@font/headland_one"
         android:gravity="center_horizontal"
         android:text="@string/item_name"

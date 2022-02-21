@@ -7,6 +7,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
+
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.util.List;
 
@@ -27,6 +29,7 @@ public class NoteActivity extends AppCompatActivity implements RecyclerViewInter
                     loadNoteData();
                 }
             });
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,7 +49,7 @@ public class NoteActivity extends AppCompatActivity implements RecyclerViewInter
     private void initRecyclerView() {
         RecyclerView recyclerView = findViewById(R.id.noteRecyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        NoteAdapter noteAdapter = new NoteAdapter(noteList,this);
+        NoteAdapter noteAdapter = new NoteAdapter(noteList, this);
         recyclerView.setAdapter(noteAdapter);
     }
 
@@ -62,9 +65,9 @@ public class NoteActivity extends AppCompatActivity implements RecyclerViewInter
         String noteTitle = noteList.get(position).getNoteTitle();
         String noteDescription = noteList.get(position).getNoteDescription();
 
-        intent.putExtra(NOTE_POSITION,noteId);
-        intent.putExtra(TITLE_UPDATE,noteTitle);
-        intent.putExtra(DESCRIPTION_UPDATE,noteDescription);
+        intent.putExtra(NOTE_POSITION, noteId);
+        intent.putExtra(TITLE_UPDATE, noteTitle);
+        intent.putExtra(DESCRIPTION_UPDATE, noteDescription);
         activityResultLauncher.launch(intent);
     }
 }

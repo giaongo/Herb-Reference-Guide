@@ -1,18 +1,10 @@
 package fi.metropolia.herbreferenceguide;
 
+import static fi.metropolia.herbreferenceguide.R.id.mcHerbs;
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Toast;
-
-import com.google.android.material.card.MaterialCardView;
-
-import java.nio.file.Path;
-import java.nio.file.Paths;
-
 import fi.metropolia.herbreferenceguide.Plant.PlantActivity;
 import fi.metropolia.herbreferenceguide.note.NoteActivity;
 
@@ -24,15 +16,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        initCardClick();
+    }
+
+    private void initCardClick() {
         CardClick cardClick = new CardClick();
-        MaterialCardView mcHerbs = findViewById(R.id.mcHerbs);
-        MaterialCardView mcFruits = findViewById(R.id.mcFruits);
-        MaterialCardView mcVegetables =  findViewById(R.id.mcVegetables);
-        MaterialCardView mcNote = findViewById(R.id.mcNotes);
-        mcHerbs.setOnClickListener(cardClick);
-        mcFruits.setOnClickListener(cardClick);
-        mcVegetables.setOnClickListener(cardClick);
-        mcNote.setOnClickListener(cardClick);
+        (findViewById(mcHerbs)).setOnClickListener(cardClick);
+        (findViewById(R.id.mcFruits)).setOnClickListener(cardClick);
+        (findViewById(R.id.mcVegetables)).setOnClickListener(cardClick);
+        (findViewById(R.id.mcNotes)).setOnClickListener(cardClick);
     }
 
     private class CardClick  implements View.OnClickListener  {
@@ -40,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         public void onClick(View view) {
             if(view.getId() != R.id.mcNotes) {
                 intent = new Intent(MainActivity.this, PlantActivity.class);
-                if(view.getId() == R.id.mcHerbs) {
+                if(view.getId() == mcHerbs) {
                     intent.putExtra(TYPE,typeChosen[0]);
                 } else if(view.getId() == R.id.mcFruits) {
                     intent.putExtra(TYPE,typeChosen[1]);
@@ -53,8 +45,4 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         }
     }
-
-
-
-
 }

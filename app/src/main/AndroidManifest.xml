@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="fi.metropolia.herbreferenceguide">
-
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -30,8 +30,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ItemDisplayActivity"
-            android:exported="false"/>
+        <activity android:name=".Plant.ItemDisplayActivity"
+            android:exported="false"
+            android:parentActivityName=".Plant.PlantActivity"/>
 
         <activity android:name=".Plant.PlantActivity"
             android:exported="false"
