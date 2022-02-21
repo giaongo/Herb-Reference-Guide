@@ -70,5 +70,4 @@ public class PlantActivity extends MainActivity implements RecyclerViewInterface
         startActivity(intent);
 
     }
-
 }
