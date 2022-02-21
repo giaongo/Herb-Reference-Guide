@@ -5,10 +5,10 @@ import androidx.room.PrimaryKey;
 
 @Entity
 public class Note {
-    @PrimaryKey (autoGenerate = true)
-    private int noteId;
-    private String noteTitle;
-    private String noteDescription;
+    @PrimaryKey(autoGenerate = true)
+    private final int noteId;
+    private final String noteTitle;
+    private final String noteDescription;
 
     public Note(int noteId, String noteTitle, String noteDescription) {
         this.noteId = noteId;
@@ -20,23 +20,12 @@ public class Note {
         return noteId;
     }
 
-    public void setNoteId(int noteId) {
-        this.noteId = noteId;
-    }
-
     public String getNoteTitle() {
         return noteTitle;
-    }
-
-    public void setNoteTitle(String noteTitle) {
-        this.noteTitle = noteTitle;
     }
 
     public String getNoteDescription() {
         return noteDescription;
     }
 
-    public void setNoteDescription(String noteDescription) {
-        this.noteDescription = noteDescription;
-    }
 }
