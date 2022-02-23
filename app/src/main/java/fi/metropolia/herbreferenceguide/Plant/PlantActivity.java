@@ -1,12 +1,18 @@
 package fi.metropolia.herbreferenceguide.Plant;
 
 import android.content.Intent;
+import android.content.res.AssetManager;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 
 import fi.metropolia.herbreferenceguide.MainActivity;
@@ -19,6 +25,8 @@ public class PlantActivity extends AppCompatActivity implements RecyclerViewInte
     private ArrayList<String> plantListName;
     private AppDatabase database;
     public static final String PLANT_ITEM = "plant item";
+    private Plant plantImg;
+    private ImageView plant_thumbnail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

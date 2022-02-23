@@ -2,20 +2,28 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/cream"
-    android:orientation="vertical"
-    android:layout_marginHorizontal="80dp"
     android:layout_marginTop="50dp"
-    android:padding="15dp">
+    android:background="@color/cream"
+    >
+
+    <ImageView
+        android:id="@+id/plant_thumbnail"
+        android:layout_width="150dp"
+        android:layout_height="150dp" />
+
 
     <TextView
         android:id="@+id/veggie_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
         android:fontFamily="@font/headland_one"
-        android:gravity="center_horizontal"
+        android:gravity="center"
         android:text="@string/item_name"
         android:textSize="20sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:padding="15dp"/>
 
 </LinearLayout>
+
+
