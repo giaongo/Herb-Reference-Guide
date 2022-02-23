@@ -28,6 +28,7 @@ public class PlantRecyclerViewAdapter extends RecyclerView.Adapter<PlantRecycler
     private final ArrayList<String> plant;
     Context context;
     private final RecyclerViewInterface recyclerViewInterface;
+    protected Plant plantItem;
 
     public PlantRecyclerViewAdapter(ArrayList<String> veggies, Context context, RecyclerViewInterface recyclerViewInterface) {
         this.plant = veggies;
@@ -47,10 +48,10 @@ public class PlantRecyclerViewAdapter extends RecyclerView.Adapter<PlantRecycler
         Resources res = context.getResources();
         String plantName = plant.get(position);
         holder.veggie_layout.setText(res.getString(R.string.item_name, plantName));
+        String plantImgSrc = plant.get(position);
         try{
             AssetManager assetManager = context.getAssets();
-
-            InputStream is = assetManager.open("Img/Herbs/basil.jpg" +plant.get(position));
+            InputStream is = assetManager.open( plantItem.getPlantImgSrc() + plantImgSrc);
             Bitmap bitmap = BitmapFactory.decodeStream(is);
             holder.plant_thumbnail.setImageBitmap(bitmap);
         }
@@ -74,6 +75,7 @@ public class PlantRecyclerViewAdapter extends RecyclerView.Adapter<PlantRecycler
             super(itemView);
             veggie_layout = itemView.findViewById(R.id.veggie_layout);
             plant_thumbnail = itemView.findViewById(R.id.plant_thumbnail);
+
             itemView.setOnClickListener(view -> {
                 if (recyclerViewInterface != null) {
                     int position = getAdapterPosition();
