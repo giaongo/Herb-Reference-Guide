@@ -25,13 +25,13 @@ import fi.metropolia.herbreferenceguide.RecyclerViewInterface;
 import fi.metropolia.herbreferenceguide.database.Plant;
 
 public class PlantRecyclerViewAdapter extends RecyclerView.Adapter<PlantRecyclerViewAdapter.ViewHolder> {
-    private final ArrayList<String> plant;
+    private final ArrayList<Plant> plantList;
     Context context;
     private final RecyclerViewInterface recyclerViewInterface;
     protected Plant plantItem;
 
-    public PlantRecyclerViewAdapter(ArrayList<String> veggies, Context context, RecyclerViewInterface recyclerViewInterface) {
-        this.plant = veggies;
+    public PlantRecyclerViewAdapter(ArrayList<Plant> plantList, Context context, RecyclerViewInterface recyclerViewInterface) {
+        this.plantList = plantList;
         this.context = context;
         this.recyclerViewInterface = recyclerViewInterface;
     }
@@ -46,12 +46,12 @@ public class PlantRecyclerViewAdapter extends RecyclerView.Adapter<PlantRecycler
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") int position) {
         Resources res = context.getResources();
-        String plantName = plant.get(position);
+        String plantName = plantList.get(position).getPlantName();
         holder.veggie_layout.setText(res.getString(R.string.item_name, plantName));
-        String plantImgSrc = plant.get(position);
+        //String plantImgSrc = plant.get(position);
         try{
             AssetManager assetManager = context.getAssets();
-            InputStream is = assetManager.open( plantItem.getPlantImgSrc() + plantImgSrc);
+            InputStream is = assetManager.open(plantList.get(position).getPlantImgSrc());
             Bitmap bitmap = BitmapFactory.decodeStream(is);
             holder.plant_thumbnail.setImageBitmap(bitmap);
         }
@@ -64,7 +64,7 @@ public class PlantRecyclerViewAdapter extends RecyclerView.Adapter<PlantRecycler
     }
     @Override
     public int getItemCount() {
-        return plant.size();
+        return plantList.size();
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {

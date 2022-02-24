@@ -22,7 +22,7 @@ import fi.metropolia.herbreferenceguide.database.AppDatabase;
 import fi.metropolia.herbreferenceguide.database.Plant;
 
 public class PlantActivity extends AppCompatActivity implements RecyclerViewInterface {
-    private ArrayList<String> plantListName;
+    private ArrayList<Plant> plantList;
     private AppDatabase database;
     public static final String PLANT_ITEM = "plant item";
     private Plant plantImg;
@@ -41,14 +41,14 @@ public class PlantActivity extends AppCompatActivity implements RecyclerViewInte
         Intent intent = getIntent();
         String plantType = intent.getStringExtra(MainActivity.TYPE);
         setTitle(plantType.toUpperCase());
-        plantListName = (ArrayList<String>) database.plantDao().getPlantByType(plantType);
+        plantList = (ArrayList<Plant>) database.plantDao().getPlantByType(plantType);
     }
 
     private void initRecyclerView() {
         RecyclerView myVeggieRecyclerView = findViewById(R.id.veggie);
         myVeggieRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         PlantRecyclerViewAdapter plantRecyclerViewAdapter = new PlantRecyclerViewAdapter(
-                plantListName,
+                plantList,
                 this,
                 this);
         myVeggieRecyclerView.setAdapter(plantRecyclerViewAdapter);
@@ -56,8 +56,8 @@ public class PlantActivity extends AppCompatActivity implements RecyclerViewInte
 
     @Override
     public void onItemClick(int position) {
-        String plantName = plantListName.get(position);
-        Plant plantItem = database.plantDao().getPlantByName(plantName);
+        Plant plant = plantList.get(position);
+        Plant plantItem = database.plantDao().getPlantByName(plant.getPlantName());
         Intent intent = new Intent(PlantActivity.this, ItemDisplayActivity.class);
         intent.putExtra(PLANT_ITEM, plantItem);
         startActivity(intent);
