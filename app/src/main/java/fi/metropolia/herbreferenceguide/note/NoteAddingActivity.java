@@ -9,8 +9,21 @@ import fi.metropolia.herbreferenceguide.R;
 import fi.metropolia.herbreferenceguide.database.Note;
 import fi.metropolia.herbreferenceguide.database.AppDatabase;
 
+/**
+ * <h1>Adding notes</h1>
+ * This class implements the application of asking for user note inputs and saving that note data to
+ * local database.
+ *
+ * @author Giao Ngo
+ * @version 1.0
+ * @since 2022-02-21
+ */
 public class NoteAddingActivity extends AppCompatActivity {
 
+    /**
+     *
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,6 +33,10 @@ public class NoteAddingActivity extends AppCompatActivity {
         btnAdd.setOnClickListener(view -> saveNote());
     }
 
+    /**
+     * This function retrieves the data from user input and saves them to room database.
+     * After that, it automatically returns back to NoteActivity.
+     */
     private void saveNote() {
         AppDatabase noteDatabase = AppDatabase.getINSTANCE(this);
         EditText title = findViewById(R.id.edtTitleAdd);
@@ -28,6 +45,10 @@ public class NoteAddingActivity extends AppCompatActivity {
         noteDatabase.noteDao().insertNote(newNote);
         returnToNoteActivity();
     }
+
+    /**
+     * This function launches NoteActivity class.
+     */
     private void returnToNoteActivity() {
         Intent intent = new Intent(NoteAddingActivity.this, NoteActivity.class);
         startActivity(intent);
