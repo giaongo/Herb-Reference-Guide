@@ -25,9 +25,6 @@ public class PlantActivity extends AppCompatActivity implements RecyclerViewInte
     private ArrayList<Plant> plantList;
     private AppDatabase database;
     public static final String PLANT_ITEM = "plant item";
-    private Plant plantImg;
-    private ImageView plant_thumbnail;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
