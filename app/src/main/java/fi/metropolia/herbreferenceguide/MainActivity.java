@@ -1,11 +1,16 @@
 package fi.metropolia.herbreferenceguide;
 
 import static fi.metropolia.herbreferenceguide.R.id.mcHerbs;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import fi.metropolia.herbreferenceguide.Plant.PlantActivity;
+import fi.metropolia.herbreferenceguide.camera.CameraActivity;
 import fi.metropolia.herbreferenceguide.note.NoteActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -43,6 +48,23 @@ public class MainActivity extends AppCompatActivity {
                 intent = new Intent(MainActivity.this, NoteActivity.class);
             }
             startActivity(intent);
+        }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main_menu,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == R.id.camera) {
+            Intent intent = new Intent(MainActivity.this, CameraActivity.class);
+            startActivity(intent);
+            return true;
+        } else {
+            return super.onOptionsItemSelected(item);
         }
     }
 }
