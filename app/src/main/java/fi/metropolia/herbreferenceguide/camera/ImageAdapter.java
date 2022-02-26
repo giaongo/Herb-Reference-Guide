@@ -1,8 +1,6 @@
 package fi.metropolia.herbreferenceguide.camera;
 
 import android.content.Context;
-import android.content.res.ColorStateList;
-import android.graphics.Bitmap;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -59,24 +57,18 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder> 
                 int position = getAdapterPosition();
                 if (position != RecyclerView.NO_POSITION) {
                     //Toggle the floating action btn icon based on image click
-                    toggleCheckedBtn();
+                    if (!isCheckedBtn) {
+                        checkedBtn.setImageResource(R.drawable.ic_check);
+                        isCheckedBtn = true;
+                        recyclerViewInterface.onItemClick(position);
+                    } else {
+                        checkedBtn.setImageResource(0);
+                        isCheckedBtn = false;
+                    }
+
                 }
-                ;
-                recyclerViewInterface.onItemClick(position);
             });
         }
-
-        private void toggleCheckedBtn() {
-            if (!isCheckedBtn) {
-                checkedBtn.setImageResource(R.drawable.ic_check);
-                isCheckedBtn = true;
-            } else {
-                checkedBtn.setImageResource(0);
-                isCheckedBtn = false;
-            }
-
-        }
-
     }
 }
 

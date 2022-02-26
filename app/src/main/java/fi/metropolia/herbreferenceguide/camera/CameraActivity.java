@@ -127,7 +127,6 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
                 .build();
         preview.setSurfaceProvider(previewView.getSurfaceProvider());
         imageCapture = new ImageCapture.Builder()
-                .setTargetRotation(previewView.getDisplay().getRotation())
                 .setCaptureMode(ImageCapture.CAPTURE_MODE_MINIMIZE_LATENCY)
                 .build();
         cameraProvider.bindToLifecycle((LifecycleOwner) this, cameraSelector, imageCapture, preview);
