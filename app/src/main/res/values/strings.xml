@@ -4,6 +4,9 @@
     <string name="note_label">My Notes</string>
     <string name="addNote_label">Adding Note</string>
     <string name="updateNote_label">Updating Note</string>
+    <string name="camera_label">Camera</string>
+    <string name="camera_title">My Camera</string>
+    <string name="camera_gallery">My Plant Collection</string>
 
     <string name="description">Arcane Herbal Knowledge</string>
     <string name="herbs">Herbs</string>
@@ -17,7 +20,7 @@
     <string name="vectorNote">Note type</string>
 
     <!--Plant sections-->
-    <string name= "item_name">%s</string>
+    <string name="item_name">%s</string>
     <string name="Herbs">Herbs</string>
     <string name="veggies">veggies</string>
     <string name="image_carrot">Carrot</string>
@@ -43,4 +46,12 @@
     <string name="btnDelete">DELETE</string>
     <string name="add_icon">Add</string>
 
+    <!-- Camera section-->
+    <string name="photoTaking">Photo Taking</string>
+    <string name="photoViewing">Photo Viewing</string>
+    <string name="photoFlipping">Photo Flipping</string>
+    <string name="plantImage">Plant Images</string>
+    <string name="checkBtn">Checked Button</string>
+    <string name="snackBarLabel">Do you want to delete this photo</string>
+    <string name="snackBarAction">DELETE</string>
 </resources>

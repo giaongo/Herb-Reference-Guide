@@ -11,7 +11,6 @@ import org.jetbrains.annotations.NotNull;
 
 @Entity
 public class Plant implements Parcelable {
-
     @PrimaryKey(autoGenerate = true)
     private final int plantId;
 
