@@ -5,14 +5,16 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class CameraImage implements Parcelable {
-    private int imageId;
-    private String imageName;
-    private Bitmap bitmap;
+    private final int imageId;
+    private final String imageName;
+    private final Bitmap bitmap;
+    private String path;
 
-    public CameraImage(int imageId, String imageName, Bitmap bitmap) {
+    public CameraImage(int imageId, String imageName, Bitmap bitmap,String path) {
         this.imageId = imageId;
         this.imageName = imageName;
         this.bitmap = bitmap;
+        this.path = path;
     }
 
     protected CameraImage(Parcel in) {
@@ -33,28 +35,16 @@ public class CameraImage implements Parcelable {
         }
     };
 
-    public int getImageId() {
-        return imageId;
-    }
-
-    public void setImageId(int imageId) {
-        this.imageId = imageId;
-    }
-
-    public String getImageName() {
-        return imageName;
-    }
-
-    public void setImageName(String imageName) {
-        this.imageName = imageName;
-    }
-
     public Bitmap getBitmap() {
         return bitmap;
     }
 
-    public void setBitmap(Bitmap bitmap) {
-        this.bitmap = bitmap;
+    public String getPath() {
+        return path;
+    }
+
+    public void setPath(String path) {
+        this.path = path;
     }
 
     @Override
