@@ -17,8 +17,8 @@ import fi.metropolia.herbreferenceguide.R;
 import fi.metropolia.herbreferenceguide.RecyclerViewInterface;
 
 public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder> {
-    private ArrayList<CameraImage> imageLists;
-    private Context context;
+    private final ArrayList<CameraImage> imageLists;
+    private final Context context;
     private final RecyclerViewInterface recyclerViewInterface;
 
     public ImageAdapter(ArrayList<CameraImage> imageLists, Context context, RecyclerViewInterface recyclerViewInterface) {
@@ -31,7 +31,7 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder> 
     @Override
     public ImageAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.image_recycler_layout, parent, false);
-        return new ViewHolder(view, recyclerViewInterface, context);
+        return new ViewHolder(view, recyclerViewInterface);
     }
 
     @Override
@@ -46,10 +46,10 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder> 
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         private final ImageView capturedImage;
-        private FloatingActionButton checkedBtn;
+        private final FloatingActionButton checkedBtn;
         private boolean isCheckedBtn = false;
 
-        public ViewHolder(@NonNull View itemView, RecyclerViewInterface recyclerViewInterface, Context context) {
+        public ViewHolder(@NonNull View itemView, RecyclerViewInterface recyclerViewInterface) {
             super(itemView);
             this.capturedImage = itemView.findViewById(R.id.capturedImage);
             checkedBtn = itemView.findViewById(R.id.btnChecked);
