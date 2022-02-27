@@ -38,7 +38,8 @@ public class ImageGalleryActivity extends AppCompatActivity implements RecyclerV
             if(objectBundle.containsKey(ImageDeletingThread.MSG_DELETE)) {
                 String receivedImageDelete = objectBundle.getString(ImageDeletingThread.MSG_DELETE);
                 Toast.makeText(ImageGalleryActivity.this,receivedImageDelete,Toast.LENGTH_SHORT).show();
-                ImageGalleryActivity.this.recreate();
+                startActivity(getIntent());
+                finish();
                 overridePendingTransition(0, 0);
             }
 
@@ -50,6 +51,7 @@ public class ImageGalleryActivity extends AppCompatActivity implements RecyclerV
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_image_gallery);
+        setTitle(R.string.camera_gallery);
         recyclerView = findViewById(R.id.imageRecyclerView);
         recyclerView.setLayoutManager(new GridLayoutManager(ImageGalleryActivity.this,3));
         updateAdapter();

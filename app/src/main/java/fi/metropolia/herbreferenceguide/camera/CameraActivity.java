@@ -60,6 +60,7 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_camera);
+        setTitle(R.string.camera_title);
         requestPermission();
         initCamera();
         FloatingActionButton btnTakePhoto = findViewById(R.id.btnTakePhoto);

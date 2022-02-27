@@ -5,6 +5,8 @@
     <string name="addNote_label">Adding Note</string>
     <string name="updateNote_label">Updating Note</string>
     <string name="camera_label">Camera</string>
+    <string name="camera_title">My Camera</string>
+    <string name="camera_gallery">My Plant Collection</string>
 
     <string name="description">Arcane Herbal Knowledge</string>
     <string name="herbs">Herbs</string>

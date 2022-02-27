@@ -16,10 +16,12 @@
         android:theme="@style/Theme.HerbReferenceGuide">
         <activity
             android:name=".camera.ImageGalleryActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".camera.CameraActivity"/>
         <activity
             android:name=".camera.CameraActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".note.NoteUpdatingActivity"
             android:exported="false"
