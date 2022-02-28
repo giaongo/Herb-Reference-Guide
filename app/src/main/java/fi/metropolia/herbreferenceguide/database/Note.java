@@ -14,12 +14,21 @@ public class Note {
     private final String noteTitle;
     private final String noteDescription;
 
+    /**
+     * Constructor for Note class
+     * @param noteId defines note Id
+     * @param noteTitle defines note Title
+     * @param noteDescription defines note Description
+     */
     public Note(int noteId, String noteTitle, String noteDescription) {
         this.noteId = noteId;
         this.noteTitle = noteTitle;
         this.noteDescription = noteDescription;
     }
 
+    /**
+     * Getter and setter of note variables
+     */
     public int getNoteId() {
         return noteId;
     }

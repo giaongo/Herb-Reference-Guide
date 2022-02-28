@@ -12,9 +12,20 @@ import java.util.List;
 @Dao
 public interface PlantDao {
 
+    /**
+     * Query to select all from plant database with selected type
+     * @param type
+     * @return data from plant database with selected type
+     */
     @Query("SELECT * FROM plant WHERE plantType = :type")
     List<Plant> getPlantByType(String type);
 
+
+    /**
+     * Query to select all from plant database with selected type
+     * @param plantName
+     * @return database from plant database with selected plant name
+     */
     @Query("SELECT * FROM plant WHERE plantName = :plantName")
     Plant getPlantByName(String plantName);
 }

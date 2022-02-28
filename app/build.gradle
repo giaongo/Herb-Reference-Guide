@@ -35,6 +35,8 @@ android {
 }
 
 dependencies {
+
+    compileOnly files("C:/Users/Hi/AppData/Local/Android/Sdk/platforms/android-32/android.jar")
     def room_version = "2.4.1"
 
     implementation "androidx.room:room-runtime:$room_version"

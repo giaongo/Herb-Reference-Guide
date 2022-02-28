@@ -13,6 +13,7 @@ import org.jetbrains.annotations.NotNull;
  * This class defines data variables that can be fetched from database
  */
 
+
 @Entity
 public class Plant implements Parcelable {
     @PrimaryKey(autoGenerate = true)
@@ -36,6 +37,16 @@ public class Plant implements Parcelable {
     @NotNull
     private final String plantImgSrc;
 
+    /**
+     * Constructor for plant class
+     * @param plantId defines plant ID
+     * @param plantName defines plant name
+     * @param plantType defines plant type
+     * @param plantNutrition defines plant nutrition value
+     * @param plantHealthBenefit defines plant health benefits
+     * @param plantFoodSuggestion defines plant food suggestions
+     * @param plantImgSrc defines plant image source
+     */
     public Plant(int plantId, @NotNull String plantName, @NotNull String plantType,
                  @NotNull String plantNutrition, @NotNull String plantHealthBenefit,
                  @NotNull String plantFoodSuggestion, @NotNull String plantImgSrc) {
@@ -81,6 +92,10 @@ public class Plant implements Parcelable {
             return new Plant[size];
         }
     };
+
+    /**
+     * Getter and setter of variables
+     */
 
     @NotNull
     public String getPlantType(){return plantType;}
