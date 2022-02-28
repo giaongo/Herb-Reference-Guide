@@ -127,7 +127,7 @@ public class ImageLoadingThread implements Runnable{
         Intent intent = imageGalleryActivity.getIntent();
         int lensFacing = intent.getIntExtra(CameraActivity.LENS_FACING,0);
         /* BackCamera = 1 , FrontCamera = 0. This rotation configuration for image display
-        is based on our front and back camera test in actual devices)
+        is based on our own front and back camera lens test in actual devices)
          */
         if(lensFacing == 1) {
             matrix.postRotate(90);
