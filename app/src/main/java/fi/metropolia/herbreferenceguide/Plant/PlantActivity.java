@@ -50,7 +50,7 @@ public class PlantActivity extends AppCompatActivity implements RecyclerViewInte
     }
 
     /**
-     * Load plant data from database according to user's selection
+     * Load plant type data from database according to user's selection
      */
     private void loadPlantData() {
         Intent intent = getIntent();

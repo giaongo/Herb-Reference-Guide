@@ -50,7 +50,7 @@ public class ItemDisplayActivity extends AppCompatActivity {
 
 
     /**
-     * Loads data from database using Parcel
+     * Loads plant data from database
      */
     private void loadPlantData() {
         plantItem = getIntent().getParcelableExtra(PlantActivity.PLANT_ITEM);
