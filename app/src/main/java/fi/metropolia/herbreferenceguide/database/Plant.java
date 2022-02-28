@@ -60,7 +60,7 @@ public class Plant implements Parcelable {
     }
 
     /**
-     * Constructor to initialize Plan with data from parcel
+     * Constructor to initialize Plant with data from parcel
      * @param in parcel
      * @see <a href="https://stackoverflow.com/questions/2139134/how-to-send-an-object-from-one-android-activity-to-another-using-intents">
      * Stack Overflow: How to send an object from one Android Activity to another using Intents? </a>

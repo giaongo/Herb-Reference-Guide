@@ -24,7 +24,7 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.ViewHolder>{
     private final RecyclerViewInterface recyclerViewInterface;
 
     /**
-     * Adapter constructors to initialise the instance of NoteAdapter
+     * Adapter constructor to initialise the instance of NoteAdapter
      * @param noteData  List of notes
      * @param recyclerViewInterface RecyclerViewInterface Interface to register click event
      */
