@@ -5,6 +5,10 @@ import androidx.room.Query;
 
 import java.util.List;
 
+
+/**
+ * This classes uses SQLite commands to access and fetch plant data from prepopulate database
+ */
 @Dao
 public interface PlantDao {
 

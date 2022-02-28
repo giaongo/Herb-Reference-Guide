@@ -7,6 +7,9 @@ import androidx.room.Query;
 
 import java.util.List;
 
+/**
+ *  This classes uses SQLite commands to access, fetch and insert/delete Note data from database
+ */
 @Dao
 public interface NoteDao {
     @Query("SELECT * FROM note")
