@@ -20,9 +20,21 @@ import fi.metropolia.herbreferenceguide.R;
 import fi.metropolia.herbreferenceguide.database.Plant;
 import fi.metropolia.herbreferenceguide.note.NoteActivity;
 
+
+/**
+ * This class fetches and loads data taken from database onto user's selection
+ * @author Shayne Kandagor
+ * @version 1.0
+ * @since 2022-02-21
+ */
 public class ItemDisplayActivity extends AppCompatActivity {
     private Plant plantItem;
 
+
+    /**
+     * Creates button with event click listener registered to navigate from selected button to information activity
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +48,10 @@ public class ItemDisplayActivity extends AppCompatActivity {
         });
     }
 
+
+    /**
+     * Loads data from database using Parcel
+     */
     private void loadPlantData() {
         plantItem = getIntent().getParcelableExtra(PlantActivity.PLANT_ITEM);
         ((TextView) findViewById(R.id.txtPlantTitle))
@@ -52,6 +68,11 @@ public class ItemDisplayActivity extends AppCompatActivity {
         loadImage();
     }
 
+    /**
+     * Loads image from Assets folder using AssetManager and Bitmap
+     * @see <a href="https://stackoverflow.com/questions/25053716/how-to-get-image-from-android-asset/25054318"
+     * How to get image from assets android></a>
+     */
     private void loadImage() {
         ImageView plantImg = findViewById(R.id.imagePlant);
         AssetManager assetManager = this.getAssets();

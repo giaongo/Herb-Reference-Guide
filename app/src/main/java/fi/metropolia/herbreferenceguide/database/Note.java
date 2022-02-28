@@ -3,6 +3,10 @@ package fi.metropolia.herbreferenceguide.database;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+
+/**
+ * This class defines Note variables that can be fetched from database
+ */
 @Entity
 public class Note {
     @PrimaryKey(autoGenerate = true)

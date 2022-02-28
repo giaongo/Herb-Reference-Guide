@@ -13,6 +13,14 @@ import fi.metropolia.herbreferenceguide.Plant.PlantActivity;
 import fi.metropolia.herbreferenceguide.camera.CameraActivity;
 import fi.metropolia.herbreferenceguide.note.NoteActivity;
 
+
+/**
+ * Displays all cardview options with event click listener registered
+ *
+ * @author Giao Ngo, Tai Nguyen, Shayne Kandago
+ * @version 1.0
+ * @since 2022-02-21
+ */
 public class MainActivity extends AppCompatActivity {
     Intent intent;
     String[] typeChosen = {"herb", "fruit",  "veggie"};
@@ -24,6 +32,10 @@ public class MainActivity extends AppCompatActivity {
         initCardClick();
     }
 
+
+    /**
+     * Registers event listener for each of the card view displayed to users
+     */
     private void initCardClick() {
         CardClick cardClick = new CardClick();
         (findViewById(mcHerbs)).setOnClickListener(cardClick);
@@ -32,6 +44,10 @@ public class MainActivity extends AppCompatActivity {
         (findViewById(R.id.mcNotes)).setOnClickListener(cardClick);
     }
 
+    /**
+     * Registers on click listener for card view displayed to users
+     * Each of the card view displays own information activity after clicked
+     */
     private class CardClick  implements View.OnClickListener  {
         @Override
         public void onClick(View view) {

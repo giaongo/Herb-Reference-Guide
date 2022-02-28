@@ -6,6 +6,11 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
+
+/**
+ * Database entity for both Note and Plant  class
+ * This class informs android studio a database will be created with given name and to Assets folder
+ */
 @Database(entities = {Note.class, Plant.class}, version = 1)
 public abstract class AppDatabase extends RoomDatabase{
         private static AppDatabase INSTANCE;

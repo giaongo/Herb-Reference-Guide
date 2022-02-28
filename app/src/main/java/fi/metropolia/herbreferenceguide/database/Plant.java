@@ -9,6 +9,10 @@ import androidx.room.PrimaryKey;
 
 import org.jetbrains.annotations.NotNull;
 
+/**
+ * This class defines data variables that can be fetched from database
+ */
+
 @Entity
 public class Plant implements Parcelable {
     @PrimaryKey(autoGenerate = true)
@@ -78,14 +82,11 @@ public class Plant implements Parcelable {
         }
     };
 
-    public int getPlantId() {
-        return plantId;
-    }
+    @NotNull
+    public String getPlantType(){return plantType;}
 
-    @NonNull
-    public String getPlantType() {
-        return plantType;
-    }
+    @NotNull
+    public int getPlantId(){ return  plantId;}
 
     @NonNull
     public String getPlantName() {
