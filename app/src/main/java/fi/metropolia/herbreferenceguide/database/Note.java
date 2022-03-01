@@ -5,7 +5,10 @@ import androidx.room.PrimaryKey;
 
 
 /**
- * This class defines Note variables that can be fetched from database
+ * This class defines Note that can be fetched from database
+ * @author Giao Ngo
+ * @version 1.0
+ * @since 2022-03-01
  */
 @Entity
 public class Note {
@@ -27,16 +30,25 @@ public class Note {
     }
 
     /**
-     * Getter and setter of note variables
+     * Gets not id
+     * @return int note id
      */
     public int getNoteId() {
         return noteId;
     }
 
+    /**
+     * Gets note title
+     * @return String note
+     */
     public String getNoteTitle() {
         return noteTitle;
     }
 
+    /**
+     * Gets note description
+     * @return String noteDescription
+     */
     public String getNoteDescription() {
         return noteDescription;
     }

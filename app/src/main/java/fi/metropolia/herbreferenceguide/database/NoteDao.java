@@ -9,14 +9,15 @@ import java.util.List;
 
 /**
  *  This classes uses SQLite commands to access, fetch and insert/delete Note data from database
+ * @author Giao Ngo
+ * @version 1.0
+ * @since 2022-03-01
  */
-
-
 @Dao
 public interface NoteDao {
     /**
      * Query to return all notes
-     * @return All Notes available in Note activity
+     * @return List <Note> </Note>All Notes available in Note activity
      */
     @Query("SELECT * FROM note")
     List<Note> getAllNote();
@@ -32,14 +33,14 @@ public interface NoteDao {
 
     /**
      * Insert note function
-     * @param note
+     * @param note Note
      */
     @Insert
     void insertNote(Note note);
 
     /**
      * Delete note function
-     * @param note
+     * @param note Note
      */
     @Delete
     void delete(Note note);

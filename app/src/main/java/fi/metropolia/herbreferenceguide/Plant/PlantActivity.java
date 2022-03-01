@@ -1,20 +1,11 @@
 package fi.metropolia.herbreferenceguide.Plant;
 
 import android.content.Intent;
-import android.content.res.AssetManager;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
-import android.widget.ImageView;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.ArrayList;
-
 import fi.metropolia.herbreferenceguide.MainActivity;
 import fi.metropolia.herbreferenceguide.R;
 import fi.metropolia.herbreferenceguide.RecyclerViewInterface;
@@ -26,7 +17,7 @@ import fi.metropolia.herbreferenceguide.database.Plant;
  * This activity displays all plants stored in room database.
  * Recycler View and event click listener were used
  *
- * @author Tai Nguyen, Giao Ngo
+ * @author Tai Nguyen
  * @version  1.0
  * @since 2022-02-21
  */
@@ -38,7 +29,7 @@ public class PlantActivity extends AppCompatActivity implements RecyclerViewInte
 
     /**
      * Menu title, plant data is displayed. Event click listener registered for floating buttons
-     * @param savedInstanceState
+     * @param savedInstanceState Bundle
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,7 +41,7 @@ public class PlantActivity extends AppCompatActivity implements RecyclerViewInte
     }
 
     /**
-     * Load plant type data from database according to user's selection
+     * Load plant type data from database according to user's selection by type
      */
     private void loadPlantData() {
         Intent intent = getIntent();
@@ -80,7 +71,7 @@ public class PlantActivity extends AppCompatActivity implements RecyclerViewInte
 
     /**
      * Registers event click listener for recycler view item click
-     * @param position
+     * @param position int
      * @see <a href="https://www.youtube.com/watch?v=7GPUpvcU1FE&ab_channel=PracticalCoding">
      * RecyclerView Item Click | Best Practice Way</a>
      */

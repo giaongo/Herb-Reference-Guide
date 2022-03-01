@@ -15,8 +15,7 @@ import fi.metropolia.herbreferenceguide.note.NoteActivity;
 
 
 /**
- * Displays all cardview options with event click listener registered
- *
+ * Displays all card view options and camera menu button with event click listener registered
  * @author Giao Ngo, Tai Nguyen, Shayne Kandago
  * @version 1.0
  * @since 2022-02-21
@@ -31,7 +30,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         initCardClick();
     }
-
 
     /**
      * Registers event listener for each of the card view displayed to users
@@ -67,12 +65,22 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Creates camera menu item
+     * @param menu Menu
+     * @return boolean
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main_menu,menu);
         return true;
     }
 
+    /**
+     * Registers menu click listener
+     * @param item MenuItem
+     * @return
+     */
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (item.getItemId() == R.id.camera) {
@@ -80,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
             return true;
         } else {
-            return super.onOptionsItemSelected(item);
+            return false;
         }
     }
 }

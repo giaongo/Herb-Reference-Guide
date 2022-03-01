@@ -11,9 +11,10 @@ import org.jetbrains.annotations.NotNull;
 
 /**
  * This class defines data variables that can be fetched from database
+ * @author Tai Nguyen
+ * @version 1.0
+ * @since 2022-03-01
  */
-
-
 @Entity
 public class Plant implements Parcelable {
     @PrimaryKey(autoGenerate = true)
@@ -94,40 +95,71 @@ public class Plant implements Parcelable {
     };
 
     /**
-     * Getter and setter of variables
+     * Gets plant type
+     * @return String plant type
      */
-
     @NotNull
     public String getPlantType(){return plantType;}
 
+    /**
+     * Gets plant id
+     * @return int id
+     */
     @NotNull
     public int getPlantId(){ return  plantId;}
 
+    /**
+     * Gets plant name
+     * @return String plant name
+     */
     @NonNull
     public String getPlantName() {
         return plantName;
     }
 
+    /**
+     * Gets plant nutrition
+     * @return String plant nutrition
+     */
     @NonNull
     public String getPlantNutrition() {
         return plantNutrition;
     }
 
+    /**
+     * Gets plant health benefit
+     * @return String plant health benefit
+     */
     @NonNull
     public String getPlantHealthBenefit() {
         return plantHealthBenefit;
     }
 
+    /**
+     * Gets plant food suggestion
+     * @return String plant food suggestion
+     */
     @NonNull
     public String getPlantFoodSuggestion() {
         return plantFoodSuggestion;
     }
 
+    /**
+     * Gets plant image source
+     * @return String plant image source
+     */
     @NonNull
     public String getPlantImgSrc() {
         return plantImgSrc;
     }
 
+
+    /**
+     * Describe the kinds of special objects contained in this Parcelable instance's marshaled representation.
+     * @return int 0
+     * @see <a href="https://stackoverflow.com/questions/2139134/how-to-send-an-object-from-one-android-activity-to-another-using-intents">
+     * Stack Overflow: How to send an object from one Android Activity to another using Intents? </a>
+     */
     @Override
     public int describeContents() {
         return 0;

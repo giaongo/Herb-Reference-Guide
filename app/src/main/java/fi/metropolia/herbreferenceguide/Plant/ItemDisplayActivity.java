@@ -33,7 +33,7 @@ public class ItemDisplayActivity extends AppCompatActivity {
 
     /**
      * Creates button with event click listener registered to navigate from selected button to information activity
-     * @param savedInstanceState
+     * @param savedInstanceState Bundle
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,6 +86,11 @@ public class ItemDisplayActivity extends AppCompatActivity {
         plantImg.setImageBitmap(bitmap);
     }
 
+    /**
+     * Return to previous activity by home menu item clicked
+     * @param item MenuItem
+     * @return boolean
+     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == android.R.id.home) {

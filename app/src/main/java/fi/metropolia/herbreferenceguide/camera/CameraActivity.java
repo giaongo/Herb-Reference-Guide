@@ -11,7 +11,6 @@ import androidx.camera.core.Preview;
 import androidx.camera.lifecycle.ProcessCameraProvider;
 import androidx.camera.view.PreviewView;
 import androidx.core.content.ContextCompat;
-import androidx.lifecycle.LifecycleOwner;
 import android.Manifest;
 import android.content.ContentValues;
 import android.content.Intent;
@@ -22,17 +21,23 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Toast;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.common.util.concurrent.ListenableFuture;
 import java.text.DateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.List;
 import java.util.concurrent.ExecutionException;
 
 import fi.metropolia.herbreferenceguide.R;
 
+/**
+ * This activity implements the multiple request permission of Camera and Media storage.
+ * Displays camera preview with feature of taking, viewing photos and flipping the camera lens.
+ *
+ * @author Giao Ngo
+ * @version 1.0
+ * @since 2022-03-01
+ */
 public class CameraActivity extends AppCompatActivity implements View.OnClickListener {
     private boolean isReadPermissionGranted = false;
     private boolean isWritePermissionGranted = false;
@@ -45,13 +50,13 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
 
     ActivityResultLauncher<String[]> mPermissionResultLauncher = registerForActivityResult(new ActivityResultContracts.RequestMultiplePermissions(),
             result -> {
-                if (result.get(Manifest.permission.READ_EXTERNAL_STORAGE) != null) {
+                if (result.containsKey(Manifest.permission.READ_EXTERNAL_STORAGE)) {
                     isReadPermissionGranted = result.get(Manifest.permission.READ_EXTERNAL_STORAGE);
                 }
-                if (result.get(Manifest.permission.WRITE_EXTERNAL_STORAGE) != null) {
+                if (result.containsKey(Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
                     isWritePermissionGranted = result.get(Manifest.permission.WRITE_EXTERNAL_STORAGE);
                 }
-                if (result.get(Manifest.permission.CAMERA) != null) {
+                if (result.containsKey(Manifest.permission.CAMERA)) {
                     isCameraPermissionGranted = result.get(Manifest.permission.CAMERA);
                 }
             });
@@ -63,12 +68,9 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
         setTitle(R.string.camera_title);
         requestPermission();
         initCamera();
-        FloatingActionButton btnTakePhoto = findViewById(R.id.btnTakePhoto);
-        FloatingActionButton btnViewPhoto = findViewById(R.id.btnViewPhoto);
-        FloatingActionButton btnFlipCamera = findViewById(R.id.btnFlipCamera);
-        btnTakePhoto.setOnClickListener(this);
-        btnViewPhoto.setOnClickListener(this);
-        btnFlipCamera.setOnClickListener(this);
+        (findViewById(R.id.btnTakePhoto)).setOnClickListener(this);
+        (findViewById(R.id.btnViewPhoto)).setOnClickListener(this);
+        (findViewById(R.id.btnFlipCamera)).setOnClickListener(this);
     }
 
     private void requestPermission() {
@@ -87,7 +89,7 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
                 Manifest.permission.CAMERA
         ) == PackageManager.PERMISSION_GRANTED;
 
-        List<String> permissionRequest = new ArrayList<>();
+        ArrayList<String> permissionRequest = new ArrayList<>();
 
         if (!isReadPermissionGranted) {
             permissionRequest.add(Manifest.permission.READ_EXTERNAL_STORAGE);
@@ -126,26 +128,22 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
         imageCapture = new ImageCapture.Builder()
                 .setCaptureMode(ImageCapture.CAPTURE_MODE_MINIMIZE_LATENCY)
                 .build();
-        cameraProvider.bindToLifecycle((LifecycleOwner) this, cameraSelector, imageCapture, preview);
+        cameraProvider.bindToLifecycle(this, cameraSelector, imageCapture, preview);
     }
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.btnTakePhoto:
-                capturePhoto();
-                break;
-            case R.id.btnViewPhoto:
-                viewPhoto();
-                break;
-            case R.id.btnFlipCamera:
-                flipCameraLens();
-                break;
+        if (view.getId() == R.id.btnTakePhoto) {
+            capturePhoto();
+        } else if(view.getId() == R.id.btnViewPhoto) {
+            viewPhoto();
+        } else {
+            flipCameraLens();
         }
     }
 
     private void capturePhoto() {
-       // Creating image display name in external storage
+        // Creating image display name in external storage
         Date date = Calendar.getInstance().getTime();
         DateFormat dateFormat = DateFormat.getDateInstance(DateFormat.SHORT);
         String strDate = dateFormat.format(date);
@@ -170,13 +168,13 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
                     @Override
                     public void onImageSaved(@NonNull ImageCapture.OutputFileResults outputFileResults) {
                         Toast.makeText(CameraActivity.this, "Image Saved Successfully",
-                        Toast.LENGTH_SHORT).show();
+                                Toast.LENGTH_SHORT).show();
                     }
 
                     @Override
                     public void onError(@NonNull ImageCaptureException exception) {
                         Toast.makeText(CameraActivity.this, "Error with saving images",
-                        Toast.LENGTH_SHORT).show();
+                                Toast.LENGTH_SHORT).show();
                     }
                 });
     }

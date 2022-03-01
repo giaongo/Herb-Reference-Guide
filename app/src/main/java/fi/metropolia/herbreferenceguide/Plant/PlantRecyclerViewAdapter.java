@@ -11,15 +11,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
-
 import fi.metropolia.herbreferenceguide.R;
 import fi.metropolia.herbreferenceguide.RecyclerViewInterface;
 import fi.metropolia.herbreferenceguide.database.Plant;
@@ -33,7 +29,6 @@ import fi.metropolia.herbreferenceguide.database.Plant;
  * @see <a href="https://www.youtube.com/watch?v=18VcnYN5_LM&t=1s&ab_channel=Stevdza-San">
  * Recycler View: Android Studio tutorial part 1/2/3</a>
  */
-
 public class PlantRecyclerViewAdapter extends RecyclerView.Adapter<PlantRecyclerViewAdapter.ViewHolder> {
     private final ArrayList<Plant> plantList;
     Context context;
@@ -41,11 +36,10 @@ public class PlantRecyclerViewAdapter extends RecyclerView.Adapter<PlantRecycler
 
     /**
      * Adapter Constructor to initialize instance of this recyclerview
-     * @param plantList
-     * @param context
-     * @param recyclerViewInterface
+     * @param plantList ArrayList
+     * @param context Context
+     * @param recyclerViewInterface RecyclerViewInterface
      */
-
     public PlantRecyclerViewAdapter(ArrayList<Plant> plantList, Context context, RecyclerViewInterface recyclerViewInterface) {
         this.plantList = plantList;
         this.context = context;
@@ -55,13 +49,12 @@ public class PlantRecyclerViewAdapter extends RecyclerView.Adapter<PlantRecycler
 
     /**
      * Creates new view
-     * @param parent
-     * @param viewType
+     * @param parent ViewGroup
+     * @param viewType int
      * @return ViewHolder new view
      * @see <a href="https://developer.android.com/guide/topics/ui/layout/recyclerview">
      * Android Studio: Create dynamic lists with RecyclerView</a>
      */
-
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -71,12 +64,11 @@ public class PlantRecyclerViewAdapter extends RecyclerView.Adapter<PlantRecycler
 
     /**
      * Set content of new recycler view by fetching data(texts and photos) from database
-     * @param holder
-     * @param position
+     * @param holder ViewHolder
+     * @param position int
      * @see <a href="https://developer.android.com/reference/android/graphics/Bitmap">
      *      * Android Studio: Bitmap</a>
      */
-
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") int position) {
         Resources res = context.getResources();
@@ -90,9 +82,6 @@ public class PlantRecyclerViewAdapter extends RecyclerView.Adapter<PlantRecycler
         }
         catch (IOException ex){
             ex.printStackTrace();
-        }
-        catch (Exception e){
-            e.printStackTrace();
         }
     }
 
@@ -112,9 +101,9 @@ public class PlantRecyclerViewAdapter extends RecyclerView.Adapter<PlantRecycler
      * Defines ViewHolder class that gives reference to the view
      * Code reference:
      * @see <a href="https://developer.android.com/guide/topics/ui/layout/recyclerview">
-     *      * Android Studio: Create dynamic lists with RecyclerView</a>.
-     *      * Event listener: <a href="https://www.youtube.com/watch?v=7GPUpvcU1FE&ab_channel=PracticalCoding">
-     *      * RecyclerView Item Click | Best Practice Way</a>
+     * Android Studio: Create dynamic lists with RecyclerView</a>.
+     * Event listener: <a href="https://www.youtube.com/watch?v=7GPUpvcU1FE&ab_channel=PracticalCoding">
+     * RecyclerView Item Click | Best Practice Way</a>
      */
     public static class ViewHolder extends RecyclerView.ViewHolder {
         private final TextView veggie_layout;
