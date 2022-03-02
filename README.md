@@ -32,6 +32,8 @@
     - [Retrieve image path form assets folder](https://stackoverflow.com/questions/25053716/how-to-get-image-from-android-asset/25054318) <br>
     - [Navigation 2 parents point to 1 child activity](https://stackoverflow.com/questions/19893342/how-to-implement-up-navigation-in-android-for-2-parents-that-point-to-1-child-ac/20145765) <br>
     - [Camera X in Java](https://www.youtube.com/watch?v=IrwhjDtpIU0&ab_channel=CodingReel) <br>
+    - [Camera X - Implement a preview](https://developer.android.com/training/camerax/preview) <br>
+    - [Camera X - Image Capture](https://developer.android.com/training/camerax/take-photo) <br>
     - [How to request multiple permissions in android studio](https://www.youtube.com/watch?v=nkayHRT8D_w&ab_channel=Foxandroid) <br>
     - [ImageCapture.OutputFileOptions.Builder](https://developer.android.com/reference/androidx/camera/core/ImageCapture.OutputFileOptions.Builder)<br>
     - [Content Provider](https://developer.android.com/guide/topics/providers/content-provider-basics) <br>
