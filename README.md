@@ -43,8 +43,8 @@
     - [Date format](https://developer.android.com/reference/java/text/DateFormat) <br>
     - [Running Android tasks in background thread](https://www.youtube.com/watch?v=IVFWC0rwfL4&ab_channel=CodingPursuits) <br>
     - [Creating a thread in Java](https://www.javatpoint.com/how-to-create-a-thread-in-java) <br>
-    - [Handler object](https://developer.android.com/reference/android/os/Handler#sendMessage(android.os.Message)) <br>
-    - [PRogrammatically relaunch/ recreate an activity](https://stackoverflow.com/questions/2486934/programmatically-relaunch-recreate-an-activity) <br>
+    - <a href="https://developer.android.com/reference/android/os/Handler#sendMessage(android.os.Message)"> Handler object</a> <br>
+    - [Programmatically relaunch/ recreate an activity](https://stackoverflow.com/questions/2486934/programmatically-relaunch-recreate-an-activity) 
 
 
 
