@@ -1,7 +1,4 @@
 package fi.metropolia.herbreferenceguide;
-
-//import static fi.metropolia.herbreferenceguide.R.id.mcHerbs;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
@@ -12,8 +9,6 @@ import android.view.View;
 import fi.metropolia.herbreferenceguide.Plant.PlantActivity;
 import fi.metropolia.herbreferenceguide.camera.CameraActivity;
 import fi.metropolia.herbreferenceguide.note.NoteActivity;
-
-
 /**
  * Displays all card view options and camera menu button with event click listener registered
  * @author Giao Ngo, Tai Nguyen, Shayne Kandagor
