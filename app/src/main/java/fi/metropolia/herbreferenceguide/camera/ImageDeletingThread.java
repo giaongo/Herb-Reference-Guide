@@ -26,7 +26,7 @@ public class ImageDeletingThread implements Runnable {
     /**
      * This constructor is used to initialise the instance of background thread
      * @param deletePosition int
-     * @param imageList ArrayList<CameraImage>
+     * @param imageList ArrayList
      * @param imageGalleryActivity ImageGalleryActivity
      * @param objHandler Handler
      */

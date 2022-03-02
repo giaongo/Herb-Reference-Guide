@@ -16,7 +16,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.io.IOException;
 import java.io.InputStream;
 
-import fi.metropolia.herbreferenceguide.R;
+import fi.metropolia.herbreferenceguide.*;
 import fi.metropolia.herbreferenceguide.database.Plant;
 import fi.metropolia.herbreferenceguide.note.NoteActivity;
 

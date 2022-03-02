@@ -17,7 +17,7 @@ import java.util.List;
 public interface NoteDao {
     /**
      * Query to return all notes
-     * @return List <Note> </Note>All Notes available in Note activity
+     * @return List All Notes available in Note activity
      */
     @Query("SELECT * FROM note")
     List<Note> getAllNote();

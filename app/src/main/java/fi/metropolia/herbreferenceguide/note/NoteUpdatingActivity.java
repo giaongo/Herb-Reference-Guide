@@ -7,7 +7,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import fi.metropolia.herbreferenceguide.R;
+import fi.metropolia.herbreferenceguide.*;
 import fi.metropolia.herbreferenceguide.database.AppDatabase;
 import fi.metropolia.herbreferenceguide.database.Note;
 

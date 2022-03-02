@@ -11,7 +11,7 @@ import android.os.Message;
 import android.widget.Toast;
 import com.google.android.material.snackbar.Snackbar;
 import java.util.ArrayList;
-import fi.metropolia.herbreferenceguide.R;
+import fi.metropolia.herbreferenceguide.*;
 import fi.metropolia.herbreferenceguide.RecyclerViewInterface;
 
 /**
@@ -113,7 +113,7 @@ public class ImageGalleryActivity extends AppCompatActivity implements RecyclerV
 
     /**
      * Sets new ArrayList to the current one
-     * @param imageList ArrayList<CameraImage>
+     * @param imageList ArrayList
      */
     public void setImageList(ArrayList<CameraImage> imageList) {
         this.imageList = imageList;

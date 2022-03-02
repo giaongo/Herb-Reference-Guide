@@ -7,7 +7,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
-import fi.metropolia.herbreferenceguide.R;
+import fi.metropolia.herbreferenceguide.*;
 import fi.metropolia.herbreferenceguide.RecyclerViewInterface;
 import fi.metropolia.herbreferenceguide.database.Note;
 

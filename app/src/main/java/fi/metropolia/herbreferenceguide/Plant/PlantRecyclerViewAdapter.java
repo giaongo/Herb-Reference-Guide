@@ -16,7 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
-import fi.metropolia.herbreferenceguide.R;
+import fi.metropolia.herbreferenceguide.*;
 import fi.metropolia.herbreferenceguide.RecyclerViewInterface;
 import fi.metropolia.herbreferenceguide.database.Plant;
 

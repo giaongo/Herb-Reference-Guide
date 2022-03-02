@@ -13,7 +13,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 
-import fi.metropolia.herbreferenceguide.R;
+import fi.metropolia.herbreferenceguide.*;
 import fi.metropolia.herbreferenceguide.RecyclerViewInterface;
 
 /**
@@ -29,7 +29,7 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder> 
 
     /**
      * Adapter constructor to initialise the instance of ImageAdapter
-     * @param imageLists ArrayList<CameraImage>
+     * @param imageLists ArrayList
      * @param context Context
      * @param recyclerViewInterface RecyclerViewInterface
      */

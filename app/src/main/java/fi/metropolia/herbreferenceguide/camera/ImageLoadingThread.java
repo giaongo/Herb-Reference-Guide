@@ -14,7 +14,7 @@ import android.provider.MediaStore;
 
 import java.util.ArrayList;
 
-import fi.metropolia.herbreferenceguide.R;
+import fi.metropolia.herbreferenceguide.*;
 
 /**
  * This background thread is defined for loading images from MediaStore

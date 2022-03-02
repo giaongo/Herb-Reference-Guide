@@ -1,6 +1,6 @@
 package fi.metropolia.herbreferenceguide;
 
-import static fi.metropolia.herbreferenceguide.R.id.mcHerbs;
+//import static fi.metropolia.herbreferenceguide.R.id.mcHerbs;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,7 +16,7 @@ import fi.metropolia.herbreferenceguide.note.NoteActivity;
 
 /**
  * Displays all card view options and camera menu button with event click listener registered
- * @author Giao Ngo, Tai Nguyen, Shayne Kandago
+ * @author Giao Ngo, Tai Nguyen, Shayne Kandagor
  * @version 1.0
  * @since 2022-02-21
  */
@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
      */
     private void initCardClick() {
         CardClick cardClick = new CardClick();
-        (findViewById(mcHerbs)).setOnClickListener(cardClick);
+        (findViewById(R.id.mcHerbs)).setOnClickListener(cardClick);
         (findViewById(R.id.mcFruits)).setOnClickListener(cardClick);
         (findViewById(R.id.mcVegetables)).setOnClickListener(cardClick);
         (findViewById(R.id.mcNotes)).setOnClickListener(cardClick);
@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         public void onClick(View view) {
             if(view.getId() != R.id.mcNotes) {
                 intent = new Intent(MainActivity.this, PlantActivity.class);
-                if(view.getId() == mcHerbs) {
+                if(view.getId() == R.id.mcHerbs) {
                     intent.putExtra(TYPE,typeChosen[0]);
                 } else if(view.getId() == R.id.mcFruits) {
                     intent.putExtra(TYPE,typeChosen[1]);
@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Registers menu click listener
      * @param item MenuItem
-     * @return
+     * @return boolean
      */
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {

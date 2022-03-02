@@ -1,5 +1,16 @@
 package fi.metropolia.herbreferenceguide.camera;
 
+import android.Manifest;
+import android.content.ContentValues;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
+import android.os.Build;
+import android.os.Bundle;
+import android.provider.MediaStore;
+import android.view.View;
+import android.widget.Toast;
+
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
@@ -11,24 +22,16 @@ import androidx.camera.core.Preview;
 import androidx.camera.lifecycle.ProcessCameraProvider;
 import androidx.camera.view.PreviewView;
 import androidx.core.content.ContextCompat;
-import android.Manifest;
-import android.content.ContentValues;
-import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.net.Uri;
-import android.os.Build;
-import android.os.Bundle;
-import android.provider.MediaStore;
-import android.view.View;
-import android.widget.Toast;
+
 import com.google.common.util.concurrent.ListenableFuture;
+
 import java.text.DateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.concurrent.ExecutionException;
 
-import fi.metropolia.herbreferenceguide.R;
+import fi.metropolia.herbreferenceguide.*;
 
 /**
  * This activity implements the multiple request permission of Camera and Media storage.

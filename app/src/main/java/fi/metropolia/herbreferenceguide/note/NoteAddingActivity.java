@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
-import fi.metropolia.herbreferenceguide.R;
+import fi.metropolia.herbreferenceguide.*;
 import fi.metropolia.herbreferenceguide.database.Note;
 import fi.metropolia.herbreferenceguide.database.AppDatabase;
 
@@ -21,8 +21,8 @@ import fi.metropolia.herbreferenceguide.database.AppDatabase;
 public class NoteAddingActivity extends AppCompatActivity {
 
     /**
-     *
-     * @param savedInstanceState
+     * Set title for activity and register event click listener
+     * @param savedInstanceState bundle on Create
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {

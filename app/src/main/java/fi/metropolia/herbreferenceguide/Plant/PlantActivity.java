@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import fi.metropolia.herbreferenceguide.MainActivity;
-import fi.metropolia.herbreferenceguide.R;
+import fi.metropolia.herbreferenceguide.*;
 import fi.metropolia.herbreferenceguide.RecyclerViewInterface;
 import fi.metropolia.herbreferenceguide.database.AppDatabase;
 import fi.metropolia.herbreferenceguide.database.Plant;
