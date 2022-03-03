@@ -48,8 +48,8 @@
     - <a href="https://developer.android.com/reference/android/os/Handler#sendMessage(android.os.Message)"> Handler object</a> <br>
     - [Programmatically relaunch/ recreate an activity](https://stackoverflow.com/questions/2486934/programmatically-relaunch-recreate-an-activity) 
 
-
-
+<h2>Herb Reference Guide App 's UI</h2>
+![Herb_UIInterface](/uploads/54b0882a891a3441954cfaa0d9cf592b/Herb_UIInterface.png)
 
 
 
