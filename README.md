@@ -17,7 +17,7 @@
 - The  app targets at Android users <br>
 - For healthy eaters who are curious of the benefits of specific plant items <br>
 - For adventurous travellers (mountain hikers, bikers, campers, forest explorers) to know  which plants are edible and which are poisonous  before touching/eating them  <br>
-- For patients seeking for matural remedies and for medical students.
+- For patients seeking for natural remedies and for medical students.
 
 <h2>Study sources and code references</h2>
 <h6>Layout and UI components</h6>
