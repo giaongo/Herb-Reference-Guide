@@ -1,4 +1,4 @@
-package fi.metropolia.herbreferenceguide.Plant;
+package fi.metropolia.herbreferenceguide.plant;
 
 import android.annotation.SuppressLint;
 import android.content.Context;

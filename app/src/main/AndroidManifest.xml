@@ -44,11 +44,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Plant.ItemDisplayActivity"
+            android:name=".plant.ItemDisplayActivity"
             android:exported="false"
-            android:parentActivityName=".Plant.PlantActivity" />
+            android:parentActivityName=".plant.PlantActivity" />
         <activity
-            android:name=".Plant.PlantActivity"
+            android:name=".plant.PlantActivity"
             android:exported="false"
             android:parentActivityName=".MainActivity" />
     </application>
