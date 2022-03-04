@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import fi.metropolia.herbreferenceguide.Plant.PlantActivity;
+import fi.metropolia.herbreferenceguide.plant.PlantActivity;
 import fi.metropolia.herbreferenceguide.camera.CameraActivity;
 import fi.metropolia.herbreferenceguide.note.NoteActivity;
 /**
