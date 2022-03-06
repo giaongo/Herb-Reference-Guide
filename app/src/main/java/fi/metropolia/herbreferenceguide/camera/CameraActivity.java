@@ -248,7 +248,6 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
      */
     private void viewPhoto() {
         Intent intent = new Intent(CameraActivity.this, ImageGalleryActivity.class);
-        intent.putExtra(LENS_FACING, lensFacing);
         startActivity(intent);
     }
 
