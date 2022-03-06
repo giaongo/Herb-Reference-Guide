@@ -19,6 +19,8 @@
 - For adventurous travellers (mountain hikers, bikers, campers, forest explorers) to know  which plants are edible and which are poisonous  before touching/eating them  <br>
 - For patients seeking for natural remedies and for medical students.
 
+<h2>Document test case</h2>
+[Document Test Case](https://docs.google.com/document/d/1dYyVx79O6v3mLDUfCLSHCA7NKpzyc5xV/edit)
 <h2>Study sources and code references</h2>
 <h6>Layout and UI components</h6>
     - [RecyclerView & RecyclerView Adapter](https://www.youtube.com/watch?v=18VcnYN5_LM&ab_channel=Stevdza-San) <br>
