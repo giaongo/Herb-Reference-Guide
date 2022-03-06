@@ -1,6 +1,5 @@
 package fi.metropolia.herbreferenceguide.camera;
 
-import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -83,6 +82,7 @@ public class ImageLoadingThread implements Runnable{
         String[] projection = {
                 //DATA : absolute filesystem path to the media item on disk
                 MediaStore.Images.Media.DATA,
+                MediaStore.Images.Media.ORIENTATION,
                 MediaStore.Images.Media.DISPLAY_NAME
         };
         Cursor cursor = imageGalleryActivity.getContentResolver().query(
@@ -99,11 +99,13 @@ public class ImageLoadingThread implements Runnable{
             // Cache column indices
             int imageIndex = 0;
             int dataColumn = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
+            int orientationColumn = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.ORIENTATION);
             int nameColumn = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DISPLAY_NAME);
             while(cursor.moveToNext()) {
                 String path = cursor.getString(dataColumn);
+                String orientation = cursor.getString(orientationColumn);
                 String name = cursor.getString(nameColumn);
-                configureBitmap(imageIndex,name,path,imageLists);
+                configureBitmap(imageIndex,name,path,imageLists,orientation);
                 imageIndex++;
             }
             cursor.close();
@@ -117,22 +119,23 @@ public class ImageLoadingThread implements Runnable{
      * @param name String
      * @param path String
      * @param imageLists ArrayList<CameraImage>
+     * @param orientation String
      * Code reference to resize and rotate bitmap:
      * @see <a href="https://stackoverflow.com/questions/29982528/how-do-i-rotate-a-bitmap-in-android">
      * How do I rotate bitmap in android</a>
      */
-    private void configureBitmap(int imageIndex,String name,String path,ArrayList<CameraImage> imageLists) {
+    private void configureBitmap(int imageIndex,String name,String path,ArrayList<CameraImage> imageLists,String orientation) {
         Bitmap bitmap = BitmapFactory.decodeFile(path);
         Matrix matrix = new Matrix();
-        Intent intent = imageGalleryActivity.getIntent();
-        int lensFacing = intent.getIntExtra(CameraActivity.LENS_FACING,0);
         /* BackCamera = 1 , FrontCamera = 0. This rotation configuration for image display
         is based on our own front and back camera lens test in actual devices)
          */
-        if(lensFacing == 1) {
+        if(orientation.equals("90")) {
             matrix.postRotate(90);
-        } else {
+        } else if (orientation.equals("270")){
             matrix.postRotate(270);
+        } else {
+            matrix.postRotate(0);
         }
         // resizes bitmap
         bitmap = Bitmap.createScaledBitmap(bitmap,(bitmap.getWidth()) / 2,
