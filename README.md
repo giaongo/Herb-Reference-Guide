@@ -101,8 +101,6 @@ Vectors.com </a> <br>
 <h2>UML Diagram</h2>
 ![Herb_Refercence_Guide_Project](/uploads/eea8cf947bdfc3b4f5128b5eb80b872f/Herb_Refercence_Guide_Project.jpg)
 
-<h2>Application Video</h2>
-
 <figure class="video_container">
   <iframe src="https://www.youtube.com/embed/7WMcCnOmJG4" frameborder="0" allowfullscreen="true"> </iframe>
 </figure>
