@@ -102,6 +102,6 @@ Vectors.com </a> <br>
 ![Herb_Refercence_Guide_Project](/uploads/eea8cf947bdfc3b4f5128b5eb80b872f/Herb_Refercence_Guide_Project.jpg)
 
 <h2>Herb Reference Guide Video </h2>
-[![Herb_Refercence_Guide_Video](https://img.youtube.com/vi/7WMcCnOmJG4/0.jpg)](https://www.youtube.com/watch?v=7WMcCnOmJG4&ab_channel=TàiNguyễnPhát)
+[![Herb_Refercence_Guide_Video](https://img.youtube.com/vi/7WMcCnOmJG4/0.jpg)(https://www.youtube.com/watch?v=7WMcCnOmJG4&ab_channel=TàiNguyễnPhát)
 
 
