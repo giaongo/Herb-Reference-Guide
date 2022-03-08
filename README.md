@@ -72,7 +72,7 @@ To enrich user's  interaction and experience with the app, we added a custom-bui
 1. [Handler object](https://developer.android.com/reference/android/os/Handler#sendMessage(android.os.Message))
 1. [Programmatically relaunch/ recreate an activity](https://stackoverflow.com/questions/2486934/programmatically-relaunch-recreate-an-activity)
 1. [RecyclerView - Android Studio Tutorial Part 1](https://www.youtube.com/watch?v=18VcnYN5_LM&t=606s&ab_channel=Stevdza-San)
-1. [RecyclerView - Android Studio Tutorial Part 2](https://www.youtube.com/watch?v=18VcnYN5_LM&t=606s&ab_channel=Stevdza-San)
+1. [RecyclerView - Android Studio Tutorial Part 2](https://www.youtube.com/watch?v=xgpLYwEmlO0&ab_channel=Stevdza-San)
 
 **In-app displayed plant's information sources**
 
