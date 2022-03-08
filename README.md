@@ -101,6 +101,7 @@ Vectors.com </a> <br>
 <h2>UML Diagram</h2>
 ![Herb_Refercence_Guide_Project](/uploads/eea8cf947bdfc3b4f5128b5eb80b872f/Herb_Refercence_Guide_Project.jpg)
 
-[![Everything Is AWESOME](https://img.youtube.com/vi/StTqXEQ2l-Y/0.jpg)](https://www.youtube.com/watch?v=StTqXEQ2l-Y "Everything Is AWESOME")
+<h2>Herb Reference Guide Video </h2>
+[![Everything Is AWESOME](https://www.youtube.com/watch?v=7WMcCnOmJG4&ab_channel=T%C3%A0iNguy%E1%BB%85nPh%C3%A1t "Herb Reference App Video")
 
 
