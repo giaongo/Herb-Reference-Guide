@@ -102,7 +102,7 @@ Vectors.com </a> <br>
 ![Herb_Refercence_Guide_Project](/uploads/eea8cf947bdfc3b4f5128b5eb80b872f/Herb_Refercence_Guide_Project.jpg)
 
 <h2>Application Video</h2>
-![Herb_Reference_Guide_Project](https://www.youtube.com/watch?v=7WMcCnOmJG4&ab_channel=T%C3%A0iNguy%E1%BB%85nPh%C3%A1t)
+[Herb_Reference_Guide_Project](https://www.youtube.com/watch?v=7WMcCnOmJG4&ab_channel=T%C3%A0iNguy%E1%BB%85nPh%C3%A1t)
 
 
 
