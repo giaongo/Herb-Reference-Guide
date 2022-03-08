@@ -34,7 +34,7 @@ To enrich user's  interaction and experience with the app, we added a custom-bui
 1. [RecyclerView click listener (best performance)](https://www.youtube.com/watch?v=7GPUpvcU1FE&ab_channel=PracticalCoding) 
 1. [Adding Card View with a textbox](https://developer.android.com/guide/topics/ui/layout/cardview)
 1. [Floating Action Button](https://developer.android.com/guide/topics/ui/floating-action-button) 
-1. [Set menu on toolbar and meny item click listener](https://stackoverflow.com/questions/7479992/handling-a-menu-item-click-event-android) 
+1. [Set menu on toolbar and menu item click listener](https://stackoverflow.com/questions/7479992/handling-a-menu-item-click-event-android) 
 1. [App Launch Icon](https://stock.adobe.com/search/images?filters%5Bcontent_type%3Azip_vector%5D=1&filters%5Borientation%5D=vertical%2Csquare&filters%5Borientation_type%5D%5Bis_square%5D=true&filters%5Bcontent_type%3Aimage%5D=1&order=relevance&safe_search=1&limit=100&search_page=1&search_type=filter-select&acp=&aco=herbal+icon&k=herbal+icon&get_facets=1&asset_id=275377040) 
 1. [Snackbar](https://material.io/components/snackbars/android#theming-snackbars) 
 
