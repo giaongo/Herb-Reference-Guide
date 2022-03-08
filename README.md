@@ -61,7 +61,10 @@ Vectors.com </a> <br>
     - [Running Android tasks in background thread](https://www.youtube.com/watch?v=IVFWC0rwfL4&ab_channel=CodingPursuits) <br>
     - [Creating a thread in Java](https://www.javatpoint.com/how-to-create-a-thread-in-java) <br>
     - <a href="https://developer.android.com/reference/android/os/Handler#sendMessage(android.os.Message)"> Handler object</a> <br>
-    - [Programmatically relaunch/ recreate an activity](https://stackoverflow.com/questions/2486934/programmatically-relaunch-recreate-an-activity) <br>
+    - [Programmatically relaunch/ recreate an activity](https://stackoverflow.com/questions/2486934/programmatically-relaunch-recreate-an-activity)<br>
+    - [RecyclerView - Android Studio Tutorial Part 1](https://www.youtube.com/watch?v=18VcnYN5_LM&t=606s&ab_channel=Stevdza-San) <br>
+    - [RecyclerView - Android Studio Tutorial Part 2](https://www.youtube.com/watch?v=18VcnYN5_LM&t=606s&ab_channel=Stevdza-San)<br>
+
 <h6>In-app displayed plant's information sources</h6>
     - [12 Best Bell Pepper Benefits + Nutritional Facts & Side Effects (stylesatlife.com)](https://stylesatlife.com/articles/bell-pepper-benefits/) <br>
     - [Bell Peppers 101: Nutrition Facts and Health Benefits (healthline.com)](https://www.healthline.com/nutrition/foods/bell-peppers#vitamins-and-minerals) <br>
