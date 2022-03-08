@@ -111,7 +111,7 @@ To enrich user's  interaction and experience with the app, we added a custom-bui
 
 ### UML Diagram
 
-![Herb_Refercence_Guide_Project](/uploads/eea8cf947bdfc3b4f5128b5eb80b872f/Herb_Refercence_Guide_Project.jpg)
+![Herb_Refercence_Guide_Project](/uploads/e3d31d98273e11d4c9506d0acaf6dabd/Herb_Refercence_Guide_Project.jpg)
 
 ### Herb Reference Guide Demo Video
 
