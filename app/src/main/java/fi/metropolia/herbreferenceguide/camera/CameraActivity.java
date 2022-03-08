@@ -205,7 +205,8 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
      *  ImageCapture.OutputFileOptions.Builder: Public constructors</a>
      */
     private void capturePhoto() {
-        // Creating image display name in external storage starting with herb and current date
+        /* Creating image display name in external storage starting with herb and current date
+        * Convert date to string: https://www.javatpoint.com/java-date-to-string */
         Date date = Calendar.getInstance().getTime();
         DateFormat dateFormat = DateFormat.getDateInstance(DateFormat.SHORT);
         String strDate = dateFormat.format(date);

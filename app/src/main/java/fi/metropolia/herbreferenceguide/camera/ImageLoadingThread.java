@@ -127,7 +127,7 @@ public class ImageLoadingThread implements Runnable{
     private void configureBitmap(int imageIndex,String name,String path,ArrayList<CameraImage> imageLists,String orientation) {
         Bitmap bitmap = BitmapFactory.decodeFile(path);
         Matrix matrix = new Matrix();
-        /* BackCamera = 1 , FrontCamera = 0. This rotation configuration for image display
+        /* This rotation configuration for image display
         is based on our own front and back camera lens test in actual devices)
          */
         if(orientation.equals("90")) {
