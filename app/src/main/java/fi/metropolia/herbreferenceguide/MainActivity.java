@@ -67,6 +67,8 @@ public class MainActivity extends AppCompatActivity {
      */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+        /*Handling a Menu item click event:
+        https://stackoverflow.com/questions/7479992/handling-a-menu-item-click-event-android*/
         getMenuInflater().inflate(R.menu.main_menu,menu);
         return true;
     }
@@ -78,6 +80,8 @@ public class MainActivity extends AppCompatActivity {
      */
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        /*Handling a Menu item click event:
+        https://stackoverflow.com/questions/7479992/handling-a-menu-item-click-event-android*/
         if (item.getItemId() == R.id.camera) {
             Intent intent = new Intent(MainActivity.this, CameraActivity.class);
             startActivity(intent);
