@@ -49,7 +49,7 @@ To enrich user's  interaction and experience with the app, we added a custom-bui
 
 ### Scenarios of the usage app
 * For users who go for picnics, hiking in mountains and forests explorers you can use our app to find useful information about a fruit, herb or vegetable you have noticed and decided whether it can be of beneficial health-wise and whether to take it.
-* For medical and nutritional students and doctors you can use our app to increase your knowlegde onn the important herbs, fruits and vegetables that can be recommended to patients.
+* For medical and nutritional students and doctors you can use our app to increase your knowledge on the important herbs, fruits and vegetables that can be recommended to patients.
 * For grocery shoppers you can use our app in the market places when you notice a strange type of herb, fruit or vegetable and decide whether you can purchase it after you have scrolled through our app and gotten the Health Benefits and warnings, Nutritional Values to our bodies and the food suggestions that include the type of plant.
 * For patients you can get information on how you can help cure, prevent and maintain certain diseases by the knowledge of the herbs, fruits and vegetables that our app provides.
 
