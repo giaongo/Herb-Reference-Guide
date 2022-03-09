@@ -39,6 +39,14 @@ To enrich user's  interaction and experience with the app, we added a custom-bui
 1. Here you can have the title and the description of your note and press the add button to add the note to the list.
 1. In the Note Activity screen you can click in one of the notes and this will enable you to Update(to add what you left out or to edit) and delete the whole note if you want to.
 
+**Camera**
+1. If you have installed the app for the first time you have to allow the app to use your device camera and also to store the images in the application.
+1. The Camera has three floating buttons. The capture button, the flipping the camera button and the button that will take you to the gallery where all the images that you have captured with the camera are.
+1. Once you capture an image there is a toast message that will inform you that the image is saved successfully in the local storage device.
+1. In the My Plant collection activity which is the gallery there is a floating action button on the bottom right of each image. 
+1. If you click the floating button of a specific image a message at the bottom will pop up asking if you want to delete the photo.
+1. If you click the button on the right of the message (DELETE) then you will delete the selected photo.
+
 
 ### Document test case and Javadoc
 
