@@ -21,6 +21,10 @@ To enrich user's  interaction and experience with the app, we added a custom-bui
 1. For adventurous travellers (mountain hikers, bikers, campers, forest explorers) to know  which plants are edible and which are poisonous  before touching/eating them 
 1. For patients seeking for natural remedies and for medical students.
 
+### Installation of the app
+1. Download the our application apk file called herb_reference_guide.apk
+1. Our application logo can be recognized with green leaves logo and our application name is Herb Reference Guide.
+
 ### Document test case and Javadoc
 
 1. [Document Test Case](https://docs.google.com/document/d/1dYyVx79O6v3mLDUfCLSHCA7NKpzyc5xV/edit?usp=sharing&ouid=114237886261926611764&rtpof=true&sd=true)
