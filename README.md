@@ -25,8 +25,13 @@ To enrich user's  interaction and experience with the app, we added a custom-bui
 1. Download the our application apk file called  [herb_reference_guide.apk](https://drive.google.com/file/d/1JKpHGsQTQVOSpIM5ns3sbksXVxX1DqCK/view?usp=sharing)
 1. Our application logo can be recognized with green leaves logo and our application name is Herb Reference Guide.
 
-### Usage of the app
-1. Click on the app icon. In the main Activity there are four options
+### Application manual
+**Plant**
+1. Click on the app icon. In the main Activity there are four options of the Herbs, Fruits,Vegetables and Notes.
+1. When you click either the Herbs, Fruits or Vegetables you find the different types together with their images.
+1. Maybe if for example you click Herbs then click Basil as a type of Herb.
+1. After clicking Basil there are the Health Benefits, Warnings, Nutritional Values and Food Suggestions.
+1. At the bottom right of the activity there is a floating Action button which will take you to the note Activity.
 
 ### Document test case and Javadoc
 
