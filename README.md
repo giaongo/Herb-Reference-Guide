@@ -33,6 +33,13 @@ To enrich user's  interaction and experience with the app, we added a custom-bui
 1. After clicking Basil there are the Health Benefits, Warnings, Nutritional Values and Food Suggestions.
 1. At the bottom right of the activity there is a floating Action button which will take you to the note Activity.
 
+**Note**
+1. In the Notes activity there is the list of many notes that the user has and if there are no notes then its blank.
+1. If you want to add your notes then click on floating action button at the bottom right of the Activity.
+1. Here you can have the title and the description of your note and press the add button to add the note to the list.
+1. In the Note Activity screen you can click in one of the notes and this will enable you to Update(to add what you left out or to edit) and delete the whole note if you want to.
+
+
 ### Document test case and Javadoc
 
 1. [Document Test Case](https://docs.google.com/document/d/1dYyVx79O6v3mLDUfCLSHCA7NKpzyc5xV/edit?usp=sharing&ouid=114237886261926611764&rtpof=true&sd=true)
