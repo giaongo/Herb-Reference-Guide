@@ -22,8 +22,11 @@ To enrich user's  interaction and experience with the app, we added a custom-bui
 1. For patients seeking for natural remedies and for medical students.
 
 ### Installation of the app
-1. Download the our application apk file called herb_reference_guide.apk
+1. Download the our application apk file called  [herb_reference_guide.apk](https://drive.google.com/file/d/1JKpHGsQTQVOSpIM5ns3sbksXVxX1DqCK/view?usp=sharing)
 1. Our application logo can be recognized with green leaves logo and our application name is Herb Reference Guide.
+
+### Usage of the app
+1. Click on the app icon. In the main Activity there are four options
 
 ### Document test case and Javadoc
 
