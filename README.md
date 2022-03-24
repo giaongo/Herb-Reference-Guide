@@ -140,11 +140,11 @@ To enrich user's  interaction and experience with the app, we added a custom-bui
 
 ### Herb Reference Guide App 's UI
 
-![Herb_UI_version2](/uploads/b7291fb5384ad26812f57c760f4b301a/Herb_UI_version2.png)
+![Herb_UI_version](https://user-images.githubusercontent.com/83873333/159903633-6d1b6a32-a87e-4690-b8a3-67967ee3c1ca.png)
 
 ### UML Diagram
 
-![Herb_Refercence_Guide_Project](/uploads/e3d31d98273e11d4c9506d0acaf6dabd/Herb_Refercence_Guide_Project.jpg)
+![Herb_Refercence_Guide_Project](https://user-images.githubusercontent.com/83873333/159903656-5ebb1f08-be7e-40ca-9a2e-09367ea64854.jpg)
 
 ### Herb Reference Guide Demo Video
 
